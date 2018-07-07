@@ -7,6 +7,7 @@
 //
 
 #import "CategoryViewController.h"
+#import <objc/runtime.h>
 #include<unordered_map>
 #include<string>
 #include <stdio.h>
@@ -110,6 +111,21 @@ void testUnorderMap() {
 //  NSLog(@"self : %lu|", ~uintptr_t(self));
 //    uintptr_t *npNum = &num;
 }
+
+/*
+ 分类观关联对象原理
+ objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key,
+ id _Nullable value, objc_AssociationPolicy policy)
+ 
+ 全局哈希表继承自 unordered_map                object 所有关联对象哈希表 unordered_map
+ --------                                      传入的参数 key 作为 KEY
+ |       |key: ~uintptr_t(object)  -----> value  |-------|
+ | ----  |                                       | key   | : Class(policy, value)
+ |       |                                       |-------|
+ | ----  |                                       |       |
+ |       |                                       |-------|
+ | ----  |                                       |-------|
+ */
 
 @end
 
