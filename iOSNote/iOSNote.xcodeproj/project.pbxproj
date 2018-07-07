@@ -45,6 +45,8 @@
 		0AA7195520F0B503007BA4A9 /* CategoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195320F0B503007BA4A9 /* CategoryViewController.mm */; };
 		0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */; };
 		0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195820F0B5D1007BA4A9 /* HomeViewController.m */; };
+		0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195C20F0F846007BA4A9 /* MemoryViewController.m */; };
+		0AA7195F20F0F846007BA4A9 /* MemoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7195D20F0F846007BA4A9 /* MemoryViewController.xib */; };
 		264C14AF81C9072437A8DB10 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D086892C545B34599B3E78 /* libPods-iOSNote.a */; };
 		BF8B2AC293F654B94C9765FD /* libPods-iOSNoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE882992A24278B6ED4E1F42 /* libPods-iOSNoteTests.a */; };
 		EE40458CD33EAD4DC9616F49 /* libPods-iOSNoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0FA2894DF389B73DA57A32 /* libPods-iOSNoteUITests.a */; };
@@ -146,6 +148,9 @@
 		0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		0AA7195720F0B5D1007BA4A9 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		0AA7195820F0B5D1007BA4A9 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		0AA7195B20F0F846007BA4A9 /* MemoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryViewController.h; sourceTree = "<group>"; };
+		0AA7195C20F0F846007BA4A9 /* MemoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
+		0AA7195D20F0F846007BA4A9 /* MemoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryViewController.xib; sourceTree = "<group>"; };
 		51D086892C545B34599B3E78 /* libPods-iOSNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E18B80C9E9C7807248755DA /* Pods-iOSNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNoteTests/Pods-iOSNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A4E3989BAD23C88364E8434 /* Pods-iOSNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -476,6 +481,7 @@
 		0A56FFA320F06E3400EA4591 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				0AA7195A20F0F834007BA4A9 /* Memory */,
 				0AA7194E20F0A1EC007BA4A9 /* Runtime */,
 				0A5602EE20F093E700EA4591 /* Home */,
 			);
@@ -525,6 +531,16 @@
 				0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		0AA7195A20F0F834007BA4A9 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				0AA7195B20F0F846007BA4A9 /* MemoryViewController.h */,
+				0AA7195C20F0F846007BA4A9 /* MemoryViewController.m */,
+				0AA7195D20F0F846007BA4A9 /* MemoryViewController.xib */,
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 		B7EF97432F670E7894914B61 /* Pods */ = {
@@ -666,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A56FF7520F06CD400EA4591 /* LaunchScreen.storyboard in Resources */,
+				0AA7195F20F0F846007BA4A9 /* MemoryViewController.xib in Resources */,
 				0A56FF7220F06CD400EA4591 /* Assets.xcassets in Resources */,
 				0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */,
 			);
@@ -854,6 +871,7 @@
 				0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */,
 				0A5602D220F07DB000EA4591 /* UIView+create.m in Sources */,
 				0A5602DF20F07DB000EA4591 /* BBSViewController.m in Sources */,
+				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
 				0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */,
 				0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */,
 				0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */,

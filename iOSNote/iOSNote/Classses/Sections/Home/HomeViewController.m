@@ -44,7 +44,7 @@ static NSString *homeCellID = @"HomeViewController.cellID";
 
 - (NSMutableArray<NSString *> *)arrClassName {
     if (!_arrClassName) {
-        _arrClassName = @[@"CategoryViewController"].mutableCopy;
+        _arrClassName = @[@"CategoryViewController", @"MemoryViewController"].mutableCopy;
     }
     return _arrClassName;
 }

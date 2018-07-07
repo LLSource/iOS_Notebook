@@ -44,3 +44,12 @@ objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key,
 ## __attribute__
 - [__attribute__ 作用，动态库的链接顺序](https://blog.csdn.net/mutourenzhang/article/details/47803803)
 
+## 内存管理
+
+
+
+
+
+
+
+
