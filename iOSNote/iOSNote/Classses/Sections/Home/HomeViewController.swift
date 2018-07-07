@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 let homeCellID = "HomeViewController.cell"
 
 class HomeViewController: BBSTableViewController {
@@ -19,6 +20,7 @@ class HomeViewController: BBSTableViewController {
         // Do any additional setup after loading the view.
         title = NSStringFromClass(self.classForCoder)
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: homeCellID)
+        
     }
 
     
@@ -39,6 +41,8 @@ extension HomeViewController {
         
         return cell!
     }
+    
+    
 }
 
 
