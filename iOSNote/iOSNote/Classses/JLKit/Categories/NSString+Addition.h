@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 struct BBSImageInfo {
     CGSize imgSize;
     CGSize thumbImgSize;
@@ -64,7 +66,7 @@ struct BBSImageInfo {
 
 
 
-
+NS_ASSUME_NONNULL_END
 
 
 

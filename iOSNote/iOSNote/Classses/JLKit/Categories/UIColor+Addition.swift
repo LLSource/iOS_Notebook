@@ -10,17 +10,17 @@ import UIKit
 
 
 extension UIColor {
-    class func bbsBackground() -> UIColor{
-        return UIColor.bbsWhite()
+    class func a_background() -> UIColor{
+        return UIColor.a_White()
     }
     
-    class func bbsBlack() -> UIColor{
+    class func a_black() -> UIColor{
         return UIColor(red:51/255.0, green:51/255.0 ,blue:51/255.0 , alpha:1.00)
     }
-    class func bbsWhite() -> UIColor{
+    class func a_White() -> UIColor{
         return UIColor(hex: 0xFFFFFF)
     }
-    class func bbsRed() -> UIColor{
+    class func a_Red() -> UIColor{
         return UIColor(hex: 0xdd0000)
     }
     class func A4() -> UIColor{

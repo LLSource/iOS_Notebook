@@ -6,9 +6,9 @@
 //  Copyright © 2018年 wzl. All rights reserved.
 //
 
-#import "BBSViewController.h"
+#import "JLViewController.h"
 
-@interface BBSTableViewController : BBSViewController <UITableViewDelegate, UITableViewDataSource>
+@interface BBSTableViewController : JLViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 /**

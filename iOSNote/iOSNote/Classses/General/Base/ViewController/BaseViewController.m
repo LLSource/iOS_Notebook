@@ -6,13 +6,13 @@
 //  Copyright © 2018年 wzl. All rights reserved.
 //
 
-#import "BBSBaseViewController.h"
+#import "BaseViewController.h"
 
-@interface BBSBaseViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation BBSBaseViewController
+@implementation BaseViewController
 - (instancetype)initWithParamter:(NSDictionary *)dicParams {
     if (self = [self init]) {
         self.dicParams = dicParams;

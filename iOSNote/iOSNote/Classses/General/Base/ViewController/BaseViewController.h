@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BBSBaseViewController : UIViewController
+@interface BaseViewController : UIViewController
 
 /**
  初始化参数

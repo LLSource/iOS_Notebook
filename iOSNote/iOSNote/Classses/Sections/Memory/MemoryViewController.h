@@ -6,8 +6,8 @@
 //  Copyright © 2018年 li’s Air. All rights reserved.
 //
 
-#import "BBSViewController.h"
+#import "JLViewController.h"
 
-@interface MemoryViewController : BBSViewController
+@interface MemoryViewController : JLViewController
 
 @end

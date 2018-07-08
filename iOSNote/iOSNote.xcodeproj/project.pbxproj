@@ -19,7 +19,7 @@
 		0A5602CA20F07DB000EA4591 /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015D20F07DAF00EA4591 /* UIDevice+Addition.m */; };
 		0A5602CB20F07DB000EA4591 /* NSDate+compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015F20F07DAF00EA4591 /* NSDate+compare.m */; };
 		0A5602CD20F07DB000EA4591 /* NSArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016220F07DAF00EA4591 /* NSArray+Addition.m */; };
-		0A5602CE20F07DB000EA4591 /* UIColor_bbsColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016520F07DAF00EA4591 /* UIColor_bbsColor.swift */; };
+		0A5602CE20F07DB000EA4591 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */; };
 		0A5602CF20F07DB000EA4591 /* NSDictionary+parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016620F07DAF00EA4591 /* NSDictionary+parsing.m */; };
 		0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016820F07DAF00EA4591 /* UIImage+Additon.m */; };
 		0A5602D120F07DB000EA4591 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016A20F07DAF00EA4591 /* UIView+Addition.m */; };
@@ -31,8 +31,8 @@
 		0A5602D720F07DB000EA4591 /* WXImageCompress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56017820F07DAF00EA4591 /* WXImageCompress.swift */; };
 		0A5602D820F07DB000EA4591 /* NSData+bbsContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56017920F07DAF00EA4591 /* NSData+bbsContentType.m */; };
 		0A5602D920F07DB000EA4591 /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56017A20F07DAF00EA4591 /* NSString+Addition.m */; };
-		0A5602DD20F07DB000EA4591 /* BBSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56018A20F07DAF00EA4591 /* BBSBaseViewController.m */; };
-		0A5602DF20F07DB000EA4591 /* BBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56018E20F07DAF00EA4591 /* BBSViewController.m */; };
+		0A5602DD20F07DB000EA4591 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56018A20F07DAF00EA4591 /* BaseViewController.m */; };
+		0A5602DF20F07DB000EA4591 /* JLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56018E20F07DAF00EA4591 /* JLViewController.m */; };
 		0A5602E220F07DB000EA4591 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56019920F07DAF00EA4591 /* Constant.m */; };
 		0A5602E320F07DB000EA4591 /* JLKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56019D20F07DAF00EA4591 /* JLKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5602EC20F093A400EA4591 /* BBSTableViewController.m */; };
@@ -42,6 +42,8 @@
 		0A56FF7820F06CD400EA4591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF7720F06CD400EA4591 /* main.m */; };
 		0A56FF8220F06CD400EA4591 /* iOSNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF8120F06CD400EA4591 /* iOSNoteTests.m */; };
 		0A56FF8D20F06CD400EA4591 /* iOSNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF8C20F06CD400EA4591 /* iOSNoteUITests.m */; };
+		0A8AEF5520F1AC9C002221B4 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8AEF5320F1AC9C002221B4 /* BlockViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0A8AEF5620F1AC9C002221B4 /* BlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8AEF5420F1AC9C002221B4 /* BlockViewController.xib */; };
 		0AA7195520F0B503007BA4A9 /* CategoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195320F0B503007BA4A9 /* CategoryViewController.mm */; };
 		0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */; };
 		0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195820F0B5D1007BA4A9 /* HomeViewController.m */; };
@@ -94,7 +96,7 @@
 		0A56016220F07DAF00EA4591 /* NSArray+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addition.m"; sourceTree = "<group>"; };
 		0A56016320F07DAF00EA4591 /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
 		0A56016420F07DAF00EA4591 /* NSData+bbsContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+bbsContentType.h"; sourceTree = "<group>"; };
-		0A56016520F07DAF00EA4591 /* UIColor_bbsColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_bbsColor.swift; sourceTree = "<group>"; };
+		0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		0A56016620F07DAF00EA4591 /* NSDictionary+parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+parsing.m"; sourceTree = "<group>"; };
 		0A56016720F07DAF00EA4591 /* UIDevice+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addition.h"; sourceTree = "<group>"; };
 		0A56016820F07DAF00EA4591 /* UIImage+Additon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additon.m"; sourceTree = "<group>"; };
@@ -114,10 +116,10 @@
 		0A56017820F07DAF00EA4591 /* WXImageCompress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXImageCompress.swift; sourceTree = "<group>"; };
 		0A56017920F07DAF00EA4591 /* NSData+bbsContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+bbsContentType.m"; sourceTree = "<group>"; };
 		0A56017A20F07DAF00EA4591 /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
-		0A56018A20F07DAF00EA4591 /* BBSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSBaseViewController.m; sourceTree = "<group>"; };
-		0A56018B20F07DAF00EA4591 /* BBSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSViewController.h; sourceTree = "<group>"; };
-		0A56018C20F07DAF00EA4591 /* BBSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSBaseViewController.h; sourceTree = "<group>"; };
-		0A56018E20F07DAF00EA4591 /* BBSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSViewController.m; sourceTree = "<group>"; };
+		0A56018A20F07DAF00EA4591 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		0A56018B20F07DAF00EA4591 /* JLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLViewController.h; sourceTree = "<group>"; };
+		0A56018C20F07DAF00EA4591 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0A56018E20F07DAF00EA4591 /* JLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLViewController.m; sourceTree = "<group>"; };
 		0A56019020F07DAF00EA4591 /* JLMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMacro.h; sourceTree = "<group>"; };
 		0A56019220F07DAF00EA4591 /* JLGlobalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLGlobalMacro.h; sourceTree = "<group>"; };
 		0A56019420F07DAF00EA4591 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
@@ -143,6 +145,9 @@
 		0A56FF8820F06CD400EA4591 /* iOSNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A56FF8C20F06CD400EA4591 /* iOSNoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNoteUITests.m; sourceTree = "<group>"; };
 		0A56FF8E20F06CD400EA4591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8AEF5220F1AC9C002221B4 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		0A8AEF5320F1AC9C002221B4 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		0A8AEF5420F1AC9C002221B4 /* BlockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockViewController.xib; sourceTree = "<group>"; };
 		0AA7195220F0B503007BA4A9 /* CategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		0AA7195320F0B503007BA4A9 /* CategoryViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CategoryViewController.mm; sourceTree = "<group>"; };
 		0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
@@ -258,7 +263,7 @@
 				0A56017A20F07DAF00EA4591 /* NSString+Addition.m */,
 				0A56016420F07DAF00EA4591 /* NSData+bbsContentType.h */,
 				0A56017920F07DAF00EA4591 /* NSData+bbsContentType.m */,
-				0A56016520F07DAF00EA4591 /* UIColor_bbsColor.swift */,
+				0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */,
 				0A56015E20F07DAF00EA4591 /* NSDictionary+parsing.h */,
 				0A56016620F07DAF00EA4591 /* NSDictionary+parsing.m */,
 				0A56016720F07DAF00EA4591 /* UIDevice+Addition.h */,
@@ -287,10 +292,10 @@
 		0A56018720F07DAF00EA4591 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0A56018C20F07DAF00EA4591 /* BBSBaseViewController.h */,
-				0A56018A20F07DAF00EA4591 /* BBSBaseViewController.m */,
-				0A56018B20F07DAF00EA4591 /* BBSViewController.h */,
-				0A56018E20F07DAF00EA4591 /* BBSViewController.m */,
+				0A56018C20F07DAF00EA4591 /* BaseViewController.h */,
+				0A56018A20F07DAF00EA4591 /* BaseViewController.m */,
+				0A56018B20F07DAF00EA4591 /* JLViewController.h */,
+				0A56018E20F07DAF00EA4591 /* JLViewController.m */,
 				0A5602EB20F093A400EA4591 /* BBSTableViewController.h */,
 				0A5602EC20F093A400EA4591 /* BBSTableViewController.m */,
 			);
@@ -523,6 +528,16 @@
 			path = JLKit;
 			sourceTree = "<group>";
 		};
+		0A8AEF5120F1AC8B002221B4 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				0A8AEF5220F1AC9C002221B4 /* BlockViewController.h */,
+				0A8AEF5320F1AC9C002221B4 /* BlockViewController.m */,
+				0A8AEF5420F1AC9C002221B4 /* BlockViewController.xib */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 		0AA7194E20F0A1EC007BA4A9 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +551,7 @@
 		0AA7195A20F0F834007BA4A9 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				0A8AEF5120F1AC8B002221B4 /* Block */,
 				0AA7195B20F0F846007BA4A9 /* MemoryViewController.h */,
 				0AA7195C20F0F846007BA4A9 /* MemoryViewController.m */,
 				0AA7195D20F0F846007BA4A9 /* MemoryViewController.xib */,
@@ -685,6 +701,7 @@
 				0AA7195F20F0F846007BA4A9 /* MemoryViewController.xib in Resources */,
 				0A56FF7220F06CD400EA4591 /* Assets.xcassets in Resources */,
 				0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */,
+				0A8AEF5620F1AC9C002221B4 /* BlockViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,7 +875,7 @@
 			files = (
 				0A5602C820F07DB000EA4591 /* BBSGrowTextContentView.m in Sources */,
 				0A5602D320F07DB000EA4591 /* UIView+errorTip.m in Sources */,
-				0A5602DD20F07DB000EA4591 /* BBSBaseViewController.m in Sources */,
+				0A5602DD20F07DB000EA4591 /* BaseViewController.m in Sources */,
 				0A5602D120F07DB000EA4591 /* UIView+Addition.m in Sources */,
 				0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */,
 				0A5602D620F07DB000EA4591 /* UIView+bbsExtension.swift in Sources */,
@@ -870,15 +887,16 @@
 				0A5602C720F07DB000EA4591 /* BBSProgressHUD.m in Sources */,
 				0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */,
 				0A5602D220F07DB000EA4591 /* UIView+create.m in Sources */,
-				0A5602DF20F07DB000EA4591 /* BBSViewController.m in Sources */,
+				0A5602DF20F07DB000EA4591 /* JLViewController.m in Sources */,
 				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
 				0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */,
 				0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */,
+				0A8AEF5520F1AC9C002221B4 /* BlockViewController.m in Sources */,
 				0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */,
 				0A5602D520F07DB000EA4591 /* UIView+corner.m in Sources */,
 				0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */,
 				0A5602D720F07DB000EA4591 /* WXImageCompress.swift in Sources */,
-				0A5602CE20F07DB000EA4591 /* UIColor_bbsColor.swift in Sources */,
+				0A5602CE20F07DB000EA4591 /* UIColor+Addition.swift in Sources */,
 				0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */,
 				0A5602CA20F07DB000EA4591 /* UIDevice+Addition.m in Sources */,
 				0A5602C620F07DB000EA4591 /* BBSErrorView.m in Sources */,
