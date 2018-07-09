@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2BFF1720F370F90028B356 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1620F370F90028B356 /* FunctionViewController.m */; };
+		0A2BFF1A20F371290028B356 /* JLListItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1920F371290028B356 /* JLListItemViewController.m */; };
 		0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */; };
 		0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013620F07DAF00EA4591 /* BBSTabBar.m */; };
 		0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013A20F07DAF00EA4591 /* UITabBar+badge.m */; };
@@ -70,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2BFF1520F370F90028B356 /* FunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
+		0A2BFF1620F370F90028B356 /* FunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
+		0A2BFF1820F371290028B356 /* JLListItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLListItemViewController.h; sourceTree = "<group>"; };
+		0A2BFF1920F371290028B356 /* JLListItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLListItemViewController.m; sourceTree = "<group>"; };
 		0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSNavigationBar.m; sourceTree = "<group>"; };
 		0A56013620F07DAF00EA4591 /* BBSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSTabBar.m; sourceTree = "<group>"; };
 		0A56013720F07DAF00EA4591 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
@@ -190,6 +196,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2BFF1320F370390028B356 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				0A2BFF1420F370430028B356 /* SearchBar */,
+				0A2BFF1520F370F90028B356 /* FunctionViewController.h */,
+				0A2BFF1620F370F90028B356 /* FunctionViewController.m */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		0A2BFF1420F370430028B356 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
 		0A56013420F07DAF00EA4591 /* Tab_NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +316,8 @@
 				0A56018E20F07DAF00EA4591 /* BBSViewController.m */,
 				0A5602EB20F093A400EA4591 /* BBSTableViewController.h */,
 				0A5602EC20F093A400EA4591 /* BBSTableViewController.m */,
+				0A2BFF1820F371290028B356 /* JLListItemViewController.h */,
+				0A2BFF1920F371290028B356 /* JLListItemViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -481,6 +506,7 @@
 		0A56FFA320F06E3400EA4591 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BFF1320F370390028B356 /* Function */,
 				0AA7195A20F0F834007BA4A9 /* Memory */,
 				0AA7194E20F0A1EC007BA4A9 /* Runtime */,
 				0A5602EE20F093E700EA4591 /* Home */,
@@ -869,6 +895,7 @@
 				0A5602D420F07DB000EA4591 /* UITableView+Addition.m in Sources */,
 				0A5602C720F07DB000EA4591 /* BBSProgressHUD.m in Sources */,
 				0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */,
+				0A2BFF1720F370F90028B356 /* FunctionViewController.m in Sources */,
 				0A5602D220F07DB000EA4591 /* UIView+create.m in Sources */,
 				0A5602DF20F07DB000EA4591 /* BBSViewController.m in Sources */,
 				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
@@ -876,6 +903,7 @@
 				0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */,
 				0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */,
 				0A5602D520F07DB000EA4591 /* UIView+corner.m in Sources */,
+				0A2BFF1A20F371290028B356 /* JLListItemViewController.m in Sources */,
 				0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */,
 				0A5602D720F07DB000EA4591 /* WXImageCompress.swift in Sources */,
 				0A5602CE20F07DB000EA4591 /* UIColor_bbsColor.swift in Sources */,

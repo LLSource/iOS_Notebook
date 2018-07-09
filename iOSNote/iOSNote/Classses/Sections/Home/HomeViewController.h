@@ -6,8 +6,8 @@
 //  Copyright © 2018年 li’s Air. All rights reserved.
 //
 
-#import "BBSTableViewController.h"
+#import "JLListItemViewController.h"
 
-@interface HomeViewController : BBSTableViewController
+@interface HomeViewController : JLListItemViewController
 
 @end
