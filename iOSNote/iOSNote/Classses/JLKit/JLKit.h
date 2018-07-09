@@ -28,11 +28,14 @@
 #import "UIView+Addition.h"
 #import "UIView+create.h"
 #import "UIView+errorTip.h"
+#import "UISearchBar+Addition.h"
 #import "UITableView+Addition.h"
 #import "NSString+Addition.h"
 #import "NSDictionary+parsing.h"
 #import "UIImage+Additon.h"
 #import "NSArray+Addition.h"
+
+#import "UIDevice+Addition.h"
 
 
 
