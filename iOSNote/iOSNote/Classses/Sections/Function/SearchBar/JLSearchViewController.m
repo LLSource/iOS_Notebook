@@ -126,13 +126,16 @@
         
         search.searchBar.delegate = self;
         
-        search.searchBar.barTintColor = COLOR_WHITE; // 搜索框背景色
-        [search.searchBar setBackgroundImage:[UIImage adt_imageWithColor:COLOR_WHITE]];
+        [search.searchBar setBackgroundImage:[UIImage adt_imageWithColor:COLOR_WHITE]];// 搜索框背景色
+        [search.searchBar setImage:[UIImage imageNamed:@"add_topic_icon_search"] 
+                  forSearchBarIcon:UISearchBarIconSearch 
+                             state:UIControlStateNormal]; // 设置搜索图标
+        [search.searchBar setImage:[UIImage imageNamed:@"topic_search_btn_clean_normal"] 
+                  forSearchBarIcon:UISearchBarIconClear 
+                             state:UIControlStateNormal];
         
         //位置
         search.searchBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, 54.0);
-        search.searchBar.contentMode = UIViewContentModeCenter;
-        // bottom line/cancel button/
         [search.searchBar adt_addBottomLineWithColor:nil];
         [search.searchBar adt_setCancelButtonTitle:@"取消"];
         [search.searchBar adt_setCancelColor:COLOR_BLACK fontSize:15];
@@ -145,13 +148,11 @@
         searchField.font = [UIFont systemFontOfSize:16];
         // To change background color
         searchField.backgroundColor = COLOR_GRAY_F2;
-        searchField.leftView = ({
-            UIImageView *v = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"add_topic_icon_search"]];
-            v;
-        });
+        
         searchField.leftViewMode = UITextFieldViewModeAlways;
         // To change text color
         searchField.textColor = COLOR_BLACK;
+        
         if (![UIDevice adt_lessThenVersion:@"11"]) {
             CGFloat textW = [search.searchBar.placeholder textWidthWithFont:searchField.font height:searchField.font.lineHeight];
             self.searchBarOffX = (searchField.frame.size.width - textW) * 0.5;
