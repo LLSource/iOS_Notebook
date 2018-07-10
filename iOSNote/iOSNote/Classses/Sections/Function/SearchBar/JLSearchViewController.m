@@ -7,6 +7,7 @@
 //
 
 #import "JLSearchViewController.h"
+#import "JLSearchResultViewController.h"
 
 @interface JLSearchViewController ()<UISearchResultsUpdating, UISearchBarDelegate>
 
@@ -14,6 +15,7 @@
 @property (assign, nonatomic) CGFloat searchBarOffX;
 
 @property (nonatomic, strong) UISearchController *searchController;
+@property (strong, nonatomic) JLSearchResultViewController *resultVC;
 
 @end
 
@@ -116,7 +118,7 @@
 - (UISearchController *)searchController {
     if (!_searchController) {
         // 创建UISearchController, 这里使用当前控制器来展示结果
-        UISearchController *search = [[UISearchController alloc]initWithSearchResultsController:nil];
+        UISearchController *search = [[UISearchController alloc] initWithSearchResultsController:self.resultVC];
         // 设置结果更新代理
         search.searchResultsUpdater = self;
         // 因为在当前控制器展示结果, 所以不需要这个透明视图
@@ -161,7 +163,12 @@
     }
     return _searchController;
 }
-
+- (JLSearchResultViewController *)resultVC {
+    if (!_resultVC) {
+        _resultVC = [[JLSearchResultViewController alloc] init];
+    }
+    return _resultVC;
+}
 @end
 
 
