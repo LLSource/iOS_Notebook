@@ -49,6 +49,7 @@
 		0A56FF7820F06CD400EA4591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF7720F06CD400EA4591 /* main.m */; };
 		0A56FF8220F06CD400EA4591 /* iOSNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF8120F06CD400EA4591 /* iOSNoteTests.m */; };
 		0A56FF8D20F06CD400EA4591 /* iOSNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF8C20F06CD400EA4591 /* iOSNoteUITests.m */; };
+		0A771FD120F5A29D0050BB78 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A771FD020F5A29D0050BB78 /* TestTableViewController.m */; };
 		0AA7195520F0B503007BA4A9 /* CategoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195320F0B503007BA4A9 /* CategoryViewController.mm */; };
 		0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */; };
 		0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7195820F0B5D1007BA4A9 /* HomeViewController.m */; };
@@ -162,6 +163,8 @@
 		0A56FF8820F06CD400EA4591 /* iOSNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A56FF8C20F06CD400EA4591 /* iOSNoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNoteUITests.m; sourceTree = "<group>"; };
 		0A56FF8E20F06CD400EA4591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A771FCF20F5A29D0050BB78 /* TestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		0A771FD020F5A29D0050BB78 /* TestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		0AA7195220F0B503007BA4A9 /* CategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		0AA7195320F0B503007BA4A9 /* CategoryViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CategoryViewController.mm; sourceTree = "<group>"; };
 		0AA7195420F0B503007BA4A9 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
@@ -527,6 +530,7 @@
 		0A56FFA320F06E3400EA4591 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				0A771FCE20F5A27B0050BB78 /* UI */,
 				0A2BFF1320F370390028B356 /* Function */,
 				0AA7195A20F0F834007BA4A9 /* Memory */,
 				0AA7194E20F0A1EC007BA4A9 /* Runtime */,
@@ -568,6 +572,15 @@
 				0A56019A20F07DAF00EA4591 /* Helpers */,
 			);
 			path = JLKit;
+			sourceTree = "<group>";
+		};
+		0A771FCE20F5A27B0050BB78 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0A771FCF20F5A29D0050BB78 /* TestTableViewController.h */,
+				0A771FD020F5A29D0050BB78 /* TestTableViewController.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		0AA7194E20F0A1EC007BA4A9 /* Runtime */ = {
@@ -932,6 +945,7 @@
 				0A2BFF1D20F372010028B356 /* JLSearchViewController.m in Sources */,
 				0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */,
 				0A5602D720F07DB000EA4591 /* WXImageCompress.swift in Sources */,
+				0A771FD120F5A29D0050BB78 /* TestTableViewController.m in Sources */,
 				0A5602CE20F07DB000EA4591 /* UIColor_bbsColor.swift in Sources */,
 				0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */,
 				0A5602C620F07DB000EA4591 /* BBSErrorView.m in Sources */,

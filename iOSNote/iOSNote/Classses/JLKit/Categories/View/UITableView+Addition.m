@@ -28,4 +28,39 @@
     
 }
 
+- (void)adt_deleteRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation {
+    NSUInteger sectionCount = [self numberOfSections];
+    if (section >= sectionCount) {
+        return;
+    }
+    NSUInteger rowCount = [self numberOfRowsInSection:section];
+    if (row >= rowCount) {
+        return;
+    }
+    
+    if (rowCount == 1) { // delete section
+        NSIndexSet *set = [NSIndexSet indexSetWithIndex:section];
+        [self deleteSections:set withRowAnimation:animation];
+    } else if (rowCount > 1) {
+        [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:section]] withRowAnimation:animation];
+    }
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
