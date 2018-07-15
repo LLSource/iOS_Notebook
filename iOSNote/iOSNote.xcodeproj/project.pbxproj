@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A23E85920F4938B006F09E9 /* search_bar_search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A23E85820F4938B006F09E9 /* search_bar_search_icon@2x.png */; };
+		0A23E85D20F49739006F09E9 /* JLSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E85B20F49739006F09E9 /* JLSearchResultViewController.m */; };
+		0A23E85E20F49739006F09E9 /* JLSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A23E85C20F49739006F09E9 /* JLSearchResultViewController.xib */; };
+		0A23E86120F4A19B006F09E9 /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E85F20F4A19B006F09E9 /* UIDevice+Addition.m */; };
+		0A2BFF1720F370F90028B356 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1620F370F90028B356 /* FunctionViewController.m */; };
+		0A2BFF1A20F371290028B356 /* JLListItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1920F371290028B356 /* JLListItemViewController.m */; };
+		0A2BFF1D20F372010028B356 /* JLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1C20F372010028B356 /* JLSearchViewController.m */; };
+		0A2BFF2020F372460028B356 /* UISearchBar+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1E20F372460028B356 /* UISearchBar+Addition.m */; };
 		0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */; };
 		0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013620F07DAF00EA4591 /* BBSTabBar.m */; };
 		0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013A20F07DAF00EA4591 /* UITabBar+badge.m */; };
@@ -16,7 +24,6 @@
 		0A5602C720F07DB000EA4591 /* BBSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015120F07DAF00EA4591 /* BBSProgressHUD.m */; };
 		0A5602C820F07DB000EA4591 /* BBSGrowTextContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015520F07DAF00EA4591 /* BBSGrowTextContentView.m */; };
 		0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015620F07DAF00EA4591 /* BBSGrowTextView.m */; };
-		0A5602CA20F07DB000EA4591 /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015D20F07DAF00EA4591 /* UIDevice+Addition.m */; };
 		0A5602CB20F07DB000EA4591 /* NSDate+compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56015F20F07DAF00EA4591 /* NSDate+compare.m */; };
 		0A5602CD20F07DB000EA4591 /* NSArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016220F07DAF00EA4591 /* NSArray+Addition.m */; };
 		0A5602CE20F07DB000EA4591 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */; };
@@ -72,6 +79,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A23E85820F4938B006F09E9 /* search_bar_search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_bar_search_icon@2x.png"; sourceTree = "<group>"; };
+		0A23E85A20F49739006F09E9 /* JLSearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLSearchResultViewController.h; sourceTree = "<group>"; };
+		0A23E85B20F49739006F09E9 /* JLSearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSearchResultViewController.m; sourceTree = "<group>"; };
+		0A23E85C20F49739006F09E9 /* JLSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLSearchResultViewController.xib; sourceTree = "<group>"; };
+		0A23E85F20F4A19B006F09E9 /* UIDevice+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addition.m"; sourceTree = "<group>"; };
+		0A23E86020F4A19B006F09E9 /* UIDevice+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addition.h"; sourceTree = "<group>"; };
+		0A2BFF1520F370F90028B356 /* FunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
+		0A2BFF1620F370F90028B356 /* FunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
+		0A2BFF1820F371290028B356 /* JLListItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLListItemViewController.h; sourceTree = "<group>"; };
+		0A2BFF1920F371290028B356 /* JLListItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLListItemViewController.m; sourceTree = "<group>"; };
+		0A2BFF1B20F372010028B356 /* JLSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLSearchViewController.h; sourceTree = "<group>"; };
+		0A2BFF1C20F372010028B356 /* JLSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSearchViewController.m; sourceTree = "<group>"; };
+		0A2BFF1E20F372460028B356 /* UISearchBar+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Addition.m"; sourceTree = "<group>"; };
+		0A2BFF1F20F372460028B356 /* UISearchBar+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Addition.h"; sourceTree = "<group>"; };
 		0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSNavigationBar.m; sourceTree = "<group>"; };
 		0A56013620F07DAF00EA4591 /* BBSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSTabBar.m; sourceTree = "<group>"; };
 		0A56013720F07DAF00EA4591 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
@@ -89,7 +110,6 @@
 		0A56015520F07DAF00EA4591 /* BBSGrowTextContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSGrowTextContentView.m; sourceTree = "<group>"; };
 		0A56015620F07DAF00EA4591 /* BBSGrowTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSGrowTextView.m; sourceTree = "<group>"; };
 		0A56015720F07DAF00EA4591 /* BBSGrowTextContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSGrowTextContentView.h; sourceTree = "<group>"; };
-		0A56015D20F07DAF00EA4591 /* UIDevice+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addition.m"; sourceTree = "<group>"; };
 		0A56015E20F07DAF00EA4591 /* NSDictionary+parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+parsing.h"; sourceTree = "<group>"; };
 		0A56015F20F07DAF00EA4591 /* NSDate+compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+compare.m"; sourceTree = "<group>"; };
 		0A56016120F07DAF00EA4591 /* UIImage+Additon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additon.h"; sourceTree = "<group>"; };
@@ -98,7 +118,6 @@
 		0A56016420F07DAF00EA4591 /* NSData+bbsContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+bbsContentType.h"; sourceTree = "<group>"; };
 		0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		0A56016620F07DAF00EA4591 /* NSDictionary+parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+parsing.m"; sourceTree = "<group>"; };
-		0A56016720F07DAF00EA4591 /* UIDevice+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addition.h"; sourceTree = "<group>"; };
 		0A56016820F07DAF00EA4591 /* UIImage+Additon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additon.m"; sourceTree = "<group>"; };
 		0A56016A20F07DAF00EA4591 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		0A56016B20F07DAF00EA4591 /* UIView+create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+create.m"; sourceTree = "<group>"; };
@@ -195,6 +214,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2BFF1320F370390028B356 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				0A2BFF1520F370F90028B356 /* FunctionViewController.h */,
+				0A2BFF1620F370F90028B356 /* FunctionViewController.m */,
+				0A2BFF1420F370430028B356 /* SearchBar */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		0A2BFF1420F370430028B356 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				0A23E85820F4938B006F09E9 /* search_bar_search_icon@2x.png */,
+				0A2BFF1B20F372010028B356 /* JLSearchViewController.h */,
+				0A2BFF1C20F372010028B356 /* JLSearchViewController.m */,
+				0A23E85A20F49739006F09E9 /* JLSearchResultViewController.h */,
+				0A23E85B20F49739006F09E9 /* JLSearchResultViewController.m */,
+				0A23E85C20F49739006F09E9 /* JLSearchResultViewController.xib */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
 		0A56013420F07DAF00EA4591 /* Tab_NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +301,8 @@
 				0A56015F20F07DAF00EA4591 /* NSDate+compare.m */,
 				0A56017720F07DAF00EA4591 /* NSArray+Addition.h */,
 				0A56016220F07DAF00EA4591 /* NSArray+Addition.m */,
+				0A23E86020F4A19B006F09E9 /* UIDevice+Addition.h */,
+				0A23E85F20F4A19B006F09E9 /* UIDevice+Addition.m */,
 				0A56016320F07DAF00EA4591 /* NSString+Addition.h */,
 				0A56017A20F07DAF00EA4591 /* NSString+Addition.m */,
 				0A56016420F07DAF00EA4591 /* NSData+bbsContentType.h */,
@@ -266,8 +310,6 @@
 				0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */,
 				0A56015E20F07DAF00EA4591 /* NSDictionary+parsing.h */,
 				0A56016620F07DAF00EA4591 /* NSDictionary+parsing.m */,
-				0A56016720F07DAF00EA4591 /* UIDevice+Addition.h */,
-				0A56015D20F07DAF00EA4591 /* UIDevice+Addition.m */,
 				0A56016120F07DAF00EA4591 /* UIImage+Additon.h */,
 				0A56016820F07DAF00EA4591 /* UIImage+Additon.m */,
 			);
@@ -277,6 +319,8 @@
 		0A56016920F07DAF00EA4591 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BFF1F20F372460028B356 /* UISearchBar+Addition.h */,
+				0A2BFF1E20F372460028B356 /* UISearchBar+Addition.m */,
 				0A56016F20F07DAF00EA4591 /* UIView+create.h */,
 				0A56016B20F07DAF00EA4591 /* UIView+create.m */,
 				0A56017020F07DAF00EA4591 /* UIView+Addition.h */,
@@ -298,6 +342,8 @@
 				0A56018E20F07DAF00EA4591 /* JLViewController.m */,
 				0A5602EB20F093A400EA4591 /* BBSTableViewController.h */,
 				0A5602EC20F093A400EA4591 /* BBSTableViewController.m */,
+				0A2BFF1820F371290028B356 /* JLListItemViewController.h */,
+				0A2BFF1920F371290028B356 /* JLListItemViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -486,6 +532,7 @@
 		0A56FFA320F06E3400EA4591 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BFF1320F370390028B356 /* Function */,
 				0AA7195A20F0F834007BA4A9 /* Memory */,
 				0AA7194E20F0A1EC007BA4A9 /* Runtime */,
 				0A5602EE20F093E700EA4591 /* Home */,
@@ -699,9 +746,11 @@
 			files = (
 				0A56FF7520F06CD400EA4591 /* LaunchScreen.storyboard in Resources */,
 				0AA7195F20F0F846007BA4A9 /* MemoryViewController.xib in Resources */,
+				0A23E85E20F49739006F09E9 /* JLSearchResultViewController.xib in Resources */,
 				0A56FF7220F06CD400EA4591 /* Assets.xcassets in Resources */,
 				0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */,
 				0A8AEF5620F1AC9C002221B4 /* BlockViewController.xib in Resources */,
+				0A23E85920F4938B006F09E9 /* search_bar_search_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,26 +931,31 @@
 				0A5602D920F07DB000EA4591 /* NSString+Addition.m in Sources */,
 				0A5602CB20F07DB000EA4591 /* NSDate+compare.m in Sources */,
 				0A5602CD20F07DB000EA4591 /* NSArray+Addition.m in Sources */,
+				0A2BFF2020F372460028B356 /* UISearchBar+Addition.m in Sources */,
 				0A5602E220F07DB000EA4591 /* Constant.m in Sources */,
 				0A5602D420F07DB000EA4591 /* UITableView+Addition.m in Sources */,
 				0A5602C720F07DB000EA4591 /* BBSProgressHUD.m in Sources */,
 				0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */,
+				0A2BFF1720F370F90028B356 /* FunctionViewController.m in Sources */,
 				0A5602D220F07DB000EA4591 /* UIView+create.m in Sources */,
 				0A5602DF20F07DB000EA4591 /* JLViewController.m in Sources */,
 				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
 				0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */,
+				0A23E85D20F49739006F09E9 /* JLSearchResultViewController.m in Sources */,
 				0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */,
 				0A8AEF5520F1AC9C002221B4 /* BlockViewController.m in Sources */,
 				0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */,
 				0A5602D520F07DB000EA4591 /* UIView+corner.m in Sources */,
+				0A2BFF1A20F371290028B356 /* JLListItemViewController.m in Sources */,
+				0A2BFF1D20F372010028B356 /* JLSearchViewController.m in Sources */,
 				0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */,
 				0A5602D720F07DB000EA4591 /* WXImageCompress.swift in Sources */,
 				0A5602CE20F07DB000EA4591 /* UIColor+Addition.swift in Sources */,
 				0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */,
-				0A5602CA20F07DB000EA4591 /* UIDevice+Addition.m in Sources */,
 				0A5602C620F07DB000EA4591 /* BBSErrorView.m in Sources */,
 				0A5602BF20F07DB000EA4591 /* BBSTextView.m in Sources */,
 				0AA7195520F0B503007BA4A9 /* CategoryViewController.mm in Sources */,
+				0A23E86120F4A19B006F09E9 /* UIDevice+Addition.m in Sources */,
 				0A5602C220F07DB000EA4591 /* BigHitButton.swift in Sources */,
 				0A56FF7820F06CD400EA4591 /* main.m in Sources */,
 				0A5602D820F07DB000EA4591 /* NSData+bbsContentType.m in Sources */,

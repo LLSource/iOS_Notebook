@@ -9,16 +9,35 @@
 #import "UIDevice+Addition.h"
 #import <AdSupport/AdSupport.h>
 #import <sys/utsname.h>
-#import "JLKeychainUtils.h"
 
 
 @implementation UIDevice (Addition)
+
 /**
  系统版本是否 < version */
 + (BOOL)adt_lessThenVersion:(NSString *)version {
     NSString *curVersion = [UIDevice currentDevice].systemVersion; // 11.2.5
     NSComparisonResult result = [curVersion compare:version options:NSNumericSearch];
     return NSOrderedAscending == result;
+}
+
+/**
+ app  版本号
+ */
++ (NSString *)adt_shortVersion {
+    NSDictionary *dic = [[NSBundle mainBundle] infoDictionary];
+    NSString *shortVersion = [dic valueForKey:@"CFBundleShortVersionString"];
+    return shortVersion;
+}
+
+/**
+ app 在桌面显示的名字 
+ */
++ (NSString *)adt_displayName {
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *info = [bundle infoDictionary];
+    NSString *prodName = [info objectForKey:@"CFBundleDisplayName"];
+    return prodName;
 }
 
 + (NSString *)adt_deviceModel {
@@ -124,20 +143,6 @@
     return adId;
 }
 
-
-/**
- 自己生成一个 uuid 保存到 keychain
-
- @return -
- */
-+ (NSString * )adt_UUIDInKeyChain {
-    NSString *uuid = [JLKeychainUtils getPasswordForUsername:@"uuid" andServiceName:BBS_KEYCHAIN_SERVICE_NAME error:nil];
-    if (uuid.length == 0) {
-        uuid = [[NSUUID UUID] UUIDString];
-        [JLKeychainUtils storeUsername:@"uuid" andPassword:uuid forServiceName:BBS_KEYCHAIN_SERVICE_NAME updateExisting:YES error:nil];
-    }
-    return uuid;
-}
 @end
 
 

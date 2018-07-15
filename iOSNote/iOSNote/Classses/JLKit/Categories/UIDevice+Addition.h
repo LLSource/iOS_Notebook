@@ -8,10 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+#define IS_LessIOS9   [UIDevice adt_lessThenVersion:@"9"]
+#define IS_LessIOS10  [UIDevice adt_lessThenVersion:@"10"]
+#define IS_LessIOS11  [UIDevice adt_lessThenVersion:@"11"]
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIDevice (Addition)
+
 /**
  系统版本是否 < version */
 + (BOOL)adt_lessThenVersion:(NSString *)version ;
+
+/**
+ app  版本号
+ */
++ (NSString *)adt_shortVersion ;
+
+/**
+ app 在桌面显示的名字 
+ */
++ (NSString *)adt_displayName ;
 
 + (NSString *)adt_deviceModel ;
 /**
@@ -19,12 +36,9 @@
  */
 + (nullable NSString *)adt_adId ;
 
-/**
- 自己生成一个 uuid 保存到 keychain
- 
- @return -
- */
-+ (NSString * )adt_UUIDInKeyChain ;
 
 
 @end
+
+
+NS_ASSUME_NONNULL_END
