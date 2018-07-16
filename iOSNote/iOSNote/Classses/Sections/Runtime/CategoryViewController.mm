@@ -23,10 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    testUnorderMap();
-    
-    
-    NSLog(@"self : %lu|", ~uintptr_t(self));
+    [self testSystemType];
+//    testUnorderMap();
+//
+//
+//    NSLog(@"self : %lu| %ld", ~uintptr_t(self), self.hash);
 }
 
 #pragma -mark
@@ -106,8 +107,13 @@ void testUnorderMap() {
  ~uintptr_t(id) 方法返回一个 18446603735771633215 字符串，不清楚是什么
  */
 - (void)testSystemType {
-    long num = 12;
-    intptr_t *pNum = &num;
+    int num = 12;
+    uintptr_t pNum = ~uintptr_t(&num);
+    NSLog(@"  %ld   %ld", &num, pNum);
+    
+    NSObject *ob = [NSObject new];
+    uintptr_t p = ~uintptr_t(ob);
+    NSLog(@"object: %ld %ld", ob, p);
 //  NSLog(@"self : %lu|", ~uintptr_t(self));
 //    uintptr_t *npNum = &num;
 }

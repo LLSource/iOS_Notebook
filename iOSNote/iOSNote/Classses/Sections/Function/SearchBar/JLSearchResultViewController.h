@@ -6,7 +6,7 @@
 //  Copyright © 2018年 li’s Air. All rights reserved.
 //
 
-#import "BBSViewController.h"
+#import "JLViewController.h"
 
 @interface JLSearchResultViewController : UIViewController
 

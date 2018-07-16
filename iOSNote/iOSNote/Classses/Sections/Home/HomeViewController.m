@@ -22,8 +22,6 @@
     [self.arrClassName addObjectsFromArray:className];
 }
 
-
-
 @end
 
 

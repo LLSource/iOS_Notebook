@@ -6,10 +6,10 @@
 //  Copyright © 2018年 wzl. All rights reserved.
 //
 
-#import "BBSBaseViewController.h"
+#import "BaseViewController.h"
 
 
-@interface BBSViewController : BBSBaseViewController
+@interface JLViewController : BaseViewController
 
 /**
  隐藏导航栏， 默认 NO 

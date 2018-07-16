@@ -23,9 +23,9 @@ extension UIView {
             objc_setAssociatedObject(self, &viewIndicatorKey, indicator, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             // add to view
             addSubview(indicator!)
-//            _ = indicator?.mas_makeConstraints({ (make) in
-//                make?.center.equalTo()(self)
-//            })
+            _ = indicator?.mas_makeConstraints({ (make) in
+                make?.center.equalTo()(self)
+            })
         }
         bringSubview(toFront: indicator!)
         indicator?.startAnimating()

@@ -6,13 +6,13 @@
 //  Copyright © 2018年 wzl. All rights reserved.
 //
 
-#import "BBSViewController.h"
+#import "JLViewController.h"
 #import "BBSErrorView.h"
 
-@interface BBSViewController ()
+@interface JLViewController ()
 @end
 
-@implementation BBSViewController
+@implementation JLViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
