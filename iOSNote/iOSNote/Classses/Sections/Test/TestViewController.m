@@ -1,25 +1,31 @@
 //
-//  FunctionViewController.m
+//  TestViewController.m
 //  iOSNote
 //
-//  Created by li’Pro on 2018/7/9.
+//  Created by li’s Air on 2018/7/24.
 //  Copyright © 2018年 li’s Air. All rights reserved.
 //
 
-#import "FunctionViewController.h"
+#import "TestViewController.h"
 
-@interface FunctionViewController ()
+#define kTestUD @"TestViewController_testUD"
+
+@interface TestViewController ()
 
 @end
 
-@implementation FunctionViewController
+
+@implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSLog(@"%@", NSHomeDirectory());
-    NSArray<NSString *> *className = @[@"CategoryViewController", @"MemoryViewController", @"JLSearchViewController", @"TestViewController"];
-    [self.arrClassName addObjectsFromArray:className];
+    // Do any additional setup after loading the view from its nib.
+//    NSLog(@"obj:%@|", [[NSUserDefaults standardUserDefaults] objectForKey:kTestUD]);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"testUser Default aaa" forKey:@"aaaKey"];
+    [[NSUserDefaults standardUserDefaults]  synchronize];
+    NSMutableArray *arr = @[].mutableCopy;
+    [arr addObject:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,3 +44,5 @@
 */
 
 @end
+
+
