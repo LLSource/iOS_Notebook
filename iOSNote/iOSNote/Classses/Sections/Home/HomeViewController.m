@@ -17,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSArray<NSString *> *className = @[@"CategoryViewController", @"MemoryViewController", @"FunctionViewController",
-                                       @"TestTableViewController"];
+    NSArray<NSString *> *className = @[@"RuntimeViewController", @"CategoryViewController", @"MemoryViewController", @"FunctionViewController", @"TestTableViewController"];
     [self.arrClassName addObjectsFromArray:className];
 }
 

@@ -9,5 +9,7 @@
 #import "JLTableViewController.h"
 
 @interface JLListItemViewController : JLTableViewController
+
 @property (strong, nonatomic) NSMutableArray<NSString *> *arrClassName;
+
 @end
