@@ -28,6 +28,10 @@
     
 }
 
+- (void)adt_deleteRowAtIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation)animation {
+    [self adt_deleteRow:indexPath.row inSection:indexPath.section animation:animation];
+}
+
 - (void)adt_deleteRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation {
     NSUInteger sectionCount = [self numberOfSections];
     if (section >= sectionCount) {

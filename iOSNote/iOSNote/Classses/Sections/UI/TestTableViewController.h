@@ -6,8 +6,9 @@
 //  Copyright © 2018年 li’s Air. All rights reserved.
 //
 
-#import "BBSTableViewController.h"
+#import "JLTableViewController.h"
 
-@interface TestTableViewController : BBSTableViewController
+
+@interface TestTableViewController : JLTableViewController
 
 @end

@@ -41,7 +41,7 @@
 		0A5602DF20F07DB000EA4591 /* JLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56018E20F07DAF00EA4591 /* JLViewController.m */; };
 		0A5602E220F07DB000EA4591 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56019920F07DAF00EA4591 /* Constant.m */; };
 		0A5602E320F07DB000EA4591 /* JLKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56019D20F07DAF00EA4591 /* JLKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5602EC20F093A400EA4591 /* BBSTableViewController.m */; };
+		0A5602ED20F093A400EA4591 /* JLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5602EC20F093A400EA4591 /* JLTableViewController.m */; };
 		0A56FF6A20F06CD000EA4591 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF6920F06CD000EA4591 /* AppDelegate.m */; };
 		0A56FF7220F06CD400EA4591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A56FF7120F06CD400EA4591 /* Assets.xcassets */; };
 		0A56FF7520F06CD400EA4591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A56FF7320F06CD400EA4591 /* LaunchScreen.storyboard */; };
@@ -150,8 +150,8 @@
 		0A5602E720F07E0E00EA4591 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0A5602E920F08D6300EA4591 /* iOSNote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSNote.h; sourceTree = "<group>"; };
 		0A5602EA20F0903700EA4591 /* JLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLKit.h; sourceTree = "<group>"; };
-		0A5602EB20F093A400EA4591 /* BBSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSTableViewController.h; sourceTree = "<group>"; };
-		0A5602EC20F093A400EA4591 /* BBSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSTableViewController.m; sourceTree = "<group>"; };
+		0A5602EB20F093A400EA4591 /* JLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTableViewController.h; sourceTree = "<group>"; };
+		0A5602EC20F093A400EA4591 /* JLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTableViewController.m; sourceTree = "<group>"; };
 		0A5602F420F094DA00EA4591 /* iOSNote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSNote-Bridging-Header.h"; sourceTree = "<group>"; };
 		0A56FF6520F06CD000EA4591 /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A56FF6820F06CD000EA4591 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -347,8 +347,8 @@
 				0A56018A20F07DAF00EA4591 /* BaseViewController.m */,
 				0A56018B20F07DAF00EA4591 /* JLViewController.h */,
 				0A56018E20F07DAF00EA4591 /* JLViewController.m */,
-				0A5602EB20F093A400EA4591 /* BBSTableViewController.h */,
-				0A5602EC20F093A400EA4591 /* BBSTableViewController.m */,
+				0A5602EB20F093A400EA4591 /* JLTableViewController.h */,
+				0A5602EC20F093A400EA4591 /* JLTableViewController.m */,
 				0A2BFF1820F371290028B356 /* JLListItemViewController.h */,
 				0A2BFF1920F371290028B356 /* JLListItemViewController.m */,
 			);
@@ -971,7 +971,7 @@
 				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
 				0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */,
 				0A23E85D20F49739006F09E9 /* JLSearchResultViewController.m in Sources */,
-				0A5602ED20F093A400EA4591 /* BBSTableViewController.m in Sources */,
+				0A5602ED20F093A400EA4591 /* JLTableViewController.m in Sources */,
 				0A8AEF5520F1AC9C002221B4 /* BlockViewController.m in Sources */,
 				0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */,
 				0A5602D520F07DB000EA4591 /* UIView+corner.m in Sources */,

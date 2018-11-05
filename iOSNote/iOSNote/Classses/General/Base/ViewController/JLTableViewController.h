@@ -1,5 +1,5 @@
 //
-//  BBSTableViewController.h
+//  JLTableViewController.h
 //  BBS
 //
 //  Created by li’Pro on 2018/4/10.
@@ -8,8 +8,8 @@
 
 #import "JLViewController.h"
 
-@interface BBSTableViewController : JLViewController <UITableViewDelegate, UITableViewDataSource>
 
+@interface JLTableViewController : JLViewController <UITableViewDelegate, UITableViewDataSource>
 
 /**
  tableView 默认 UITableViewStylePlain 样式

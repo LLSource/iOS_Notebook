@@ -13,7 +13,7 @@
 #define SwiftHeader "iOSNote-Swift.h"
 
 #import "JLViewController.h"
-#import "BBSTableViewController.h"
+#import "JLTableViewController.h"
 #import "BBSProgressHUD.h"
 
 #import <Masonry.h>
