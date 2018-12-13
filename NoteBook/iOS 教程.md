@@ -39,7 +39,11 @@ objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key,
  
  map.erase("c"); // 删除 key 为 c 的值
  
+### 2、weak 的实现
 
+> runtime 维护一个全局 StripedMap ，利用弱引用对象的地址从 StripedMap 的数组中取 SideMap，此map 中有一个 weak_table_t  结构体, 此weak 表里面存着一系列由 对象 和对象相关的弱指针数组 组成的 entry，添加弱指针时就向 ertry 的弱指针数组添加元素；当对象释放时，从 entry 的弱指针数组中情况所有内容，并将 entry 从 weak 表中移除。
+
+- [cocoaChina讲解weak原理](http://www.cocoachina.com/ios/20170328/18962.html)
 
 ## __attribute__
 - [__attribute__ 作用，动态库的链接顺序](https://blog.csdn.net/mutourenzhang/article/details/47803803)
