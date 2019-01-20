@@ -47,6 +47,105 @@ objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key,
 
 - [cocoaChina讲解weak原理](http://www.cocoachina.com/ios/20170328/18962.html)
 
+### 3、autoreloasePool 的实现
+- [雷纯锋-autoreloasePool](http://blog.leichunfeng.com/blog/2015/05/31/objective-c-autorelease-pool-implementation-principle/)
+
+ autoreleasepool 是没有单独的内存结构的，它是通过以 AutoreleasePoolPage 为结点的双向链表来实现的。 将 @autoreleasePoll { } 转换为 C++，最终实现是这样的：
+ 
+ ```
+ /* @autoreleasepool */ {
+    void *atautoreleasepoolobj = objc_autoreleasePoolPush();
+    // 用户代码，所有接收到 autorelease 消息的对象会被添加到这个 autoreleasepool 中
+    objc_autoreleasePoolPop(atautoreleasepoolobj);
+}
+ ```
+ 
+- push 操作，push 就是钓鱼 AutoreleasePoolPage  的 push
+ 
+ ```
+ void *
+objc_autoreleasePoolPush(void)
+{
+    if (UseGC) return nil;
+    return AutoreleasePoolPage::push();
+}
+static inline void *push()
+{
+    id *dest = autoreleaseFast(POOL_SENTINEL);
+    assert(*dest == POOL_SENTINEL);
+    return dest;
+}
+
+ ```
+ 
+ 通过 autoreleaseFast 完成插入操作
+ 
+ ```
+ static inline id *autoreleaseFast(id obj)
+{
+    AutoreleasePoolPage *page = hotPage();
+    if (page && !page->full()) {
+        return page->add(obj);
+    } else if (page) {
+        return autoreleaseFullPage(obj, page);
+    } else {
+        return autoreleaseNoPage(obj);
+    }
+}
+```
+  分别对三种情况进行了不同的处理：
+  - 当前 page 存在且没有满时，直接将对象添加到当前 page 中，即 next 指向的位置；
+  - 当前 page 存在且已满时，创建一个新的 page ，并将对象添加到新创建的 page 中；
+  - 当前 page 不存在时，即还没有 page 时，创建第一个 page ，并将对象添加到新创建的 page 中。
+  
+每调用一次 push 操作就会创建一个新的 autoreleasepool ，即往 AutoreleasePoolPage 中插入一个 POOL_SENTINEL ，并且返回插入的 POOL_SENTINEL 的内存地址。
+
+- autorelease 
+
+AutoreleasePoolPage 的 autorelease 函数的实现对我们来说就比较容量理解了，它跟 push 操作的实现非常相似。只不过 push 操作插入的是一个 POOL_SENTINEL ，而 autorelease 操作插入的是一个具体的 autoreleased 对象。
+
+```
+static inline id autorelease(id obj)
+{
+    assert(obj);
+    assert(!obj->isTaggedPointer());
+    id *dest __unused = autoreleaseFast(obj);
+    assert(!dest  ||  *dest == obj);
+    return obj;
+}
+
+```
+
+- pop 操作
+
+前面提到的 objc_autoreleasePoolPop(void *) 函数本质上也是调用的 AutoreleasePoolPage 的 pop 函数。
+
+pop 函数的入参就是 push 函数的返回值，也就是 POOL_SENTINEL 的内存地址，即 pool token 。当执行 pop 操作时，内存地址在 pool token 之后的所有 autoreleased 对象都会被 release 。直到 pool token 所在 page 的 next 指向 pool token 为止。
+
+
+- ep:下面是某个线程的 autoreleasepool 堆栈的内存结构图，在这个 autoreleasepool 堆栈中总共有两个 POOL_SENTINEL ，即有两个 autoreleasepool 。该堆栈由三个 AutoreleasePoolPage 结点组成，第一个 AutoreleasePoolPage 结点为 coldPage() ，最后一个 AutoreleasePoolPage 结点为 hotPage() 。其中，前两个结点已经满了，最后一个结点中保存了最新添加的 autoreleased 对象 objr3 的内存地址。
+
+![origin](http://blog.leichunfeng.com/images/AutoreleasePoolPage1.png)
+
+此时，如果执行 pop(token1) 操作，那么该 autoreleasepool 堆栈的内存结构将会变成如下图所示：
+
+![pop](http://blog.leichunfeng.com/images/AutoreleasePoolPage2.png)
+
+- 每一个线程都会维护自己的 autoreleasepool 堆栈。换句话说 autoreleasepool 是与线程紧密相关的，每一个 autoreleasepool 只对应一个线程。
+
+- 总结
+通常情况下，我们是不需要手动添加 autoreleasepool 的，使用线程自动维护的 autoreleasepool 就好了。根据苹果官方文档中对 Using Autorelease Pool Blocks 的描述，我们知道在下面三种情况下是需要我们手动添加 autoreleasepool 的：
+
+ - 如果你编写的程序不是基于 UI 框架的，比如说命令行工具；
+ - 如果你编写的循环中创建了大量的临时对象；
+ - 如果你创建了一个辅助线程。
+
+
+
+
+
+
+
 ## __attribute__
 - [__attribute__ 作用，动态库的链接顺序](https://blog.csdn.net/mutourenzhang/article/details/47803803)
 
