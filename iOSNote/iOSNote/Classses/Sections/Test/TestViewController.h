@@ -6,8 +6,8 @@
 //  Copyright © 2018年 li’s Air. All rights reserved.
 //
 
-#import "JLViewController.h"
+#import "JLTableViewController.h"
 
-@interface TestViewController : JLViewController
+@interface TestViewController : JLTableViewController
 
 @end

@@ -20,6 +20,7 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTestTVCellID];
 }
 
@@ -29,6 +30,7 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 }
 
 #pragma -mark UITableviewDatasource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.arrData.count;
 }
@@ -66,6 +68,8 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
     }
     return _arrData;
 }
+
+
 @end
 
 

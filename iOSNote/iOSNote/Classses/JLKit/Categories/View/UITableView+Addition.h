@@ -17,6 +17,7 @@
  */
 - (void)adt_scrollToBottom:(BOOL)animated ;
 
+- (void)adt_deleteRowAtIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation)animation ;
 
 - (void)adt_deleteRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation ;
 
