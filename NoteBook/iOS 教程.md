@@ -15,7 +15,7 @@ objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key,
  
  全局哈希表继承自 unordered_map                object 所有关联对象哈希表 unordered_map
  --------                                      传入的参数 key 作为 KEY
- |  key  |: ~uintptr_t(object)-----> value       |-------|
+ |obj adr|: ~uintptr_t(object)-----> value       |-------|
  | ----  |                                       | key   | : Class(policy, value)
  |       |                                       |-------|
  | ----  |                                       |       |
