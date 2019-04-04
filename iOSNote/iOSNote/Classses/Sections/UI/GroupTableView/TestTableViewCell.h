@@ -10,17 +10,10 @@
 #import "TestModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol TestTableViewCellDelegate <NSObject>
-
-- (void)testCellBtnDeleteClicked:(UIButton *)sender model:(TestModel *)model ;
-
-@end
 
 @interface TestTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) id<TestTableViewCellDelegate> deletate;
 
-@property (weak, nonatomic) IBOutlet UIButton *btnDelete;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 
 @property (strong, nonatomic) TestModel *model;

@@ -11,7 +11,7 @@
 
 static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 
-@interface PlainListViewController ()<TestTableViewCellDelegate>
+@interface PlainListViewController ()
 
 @property (strong, nonatomic) NSMutableArray *arrData;
 
@@ -29,22 +29,6 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 }
 
 
-#pragma -mark TestTableViewCellDelegate
-
-- (void)testCellBtnDeleteClicked:(UIButton *)sender model:(TestModel *)model {
-    NSIndexPath *indexPath = nil;
-    for (NSUInteger i =0, max = self.arrData.count; i < max; i++) {
-        if (self.arrData[i] == model) {
-            indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-            [self.arrData removeObjectAtIndex:i];
-            break;
-        }
-    }
-    
-    
-    if (indexPath)
-        [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
@@ -67,7 +51,6 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTestTVCellID];
-    cell.deletate = self;
     
     cell.model = self.arrData[indexPath.row];
     

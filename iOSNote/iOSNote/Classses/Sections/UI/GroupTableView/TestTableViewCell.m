@@ -21,12 +21,6 @@
     self.lblTitle.text = model.name;
 }
 
-- (IBAction)btnDeleteClicked:(UIButton *)sender {
-    if (self.deletate &&
-        [self.deletate respondsToSelector:@selector(testCellBtnDeleteClicked:model:)]) {
-        [self.deletate testCellBtnDeleteClicked:sender model:self.model];
-    }
-}
 
 
 

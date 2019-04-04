@@ -11,7 +11,7 @@
 
 static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 
-@interface TestTableViewController ()<TestTableViewCellDelegate>
+@interface TestTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *arrData;
 
@@ -34,29 +34,6 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 }
 
 
-#pragma -mark TestTableViewCellDelegate
-
-- (void)testCellBtnDeleteClicked:(UIButton *)sender model:(TestModel *)model {
-    NSIndexPath *indexPath ;
-    
-    for (NSInteger i = 0; i<self.arrData.count; i++) {
-        
-        NSMutableArray *arrSec = self.arrData[i];
-        for (NSInteger j = 0; j<arrSec.count; j++) {
-            if (arrSec[j] == model) {
-                [arrSec removeObjectAtIndex:j];
-                indexPath = [NSIndexPath indexPathForRow:j inSection:i];
-                
-                if (0 == arrSec.count) {
-                    [self.arrData removeObjectAtIndex:i];
-                }
-                break;
-            }
-        }
-    }
-    if (indexPath)
-        [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
@@ -79,16 +56,30 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTestTVCellID];
-    cell.deletate = self;
     
     cell.model = [self.arrData[indexPath.section] objectAtIndex:indexPath.row];
     
     return cell;
 }
 
+/*
+ 是否实现：numberOfSectionsInTableView
+ 实现
+ 返回 0 正常
+ 返回 1 正常
+ 不实现    正常
+ 
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    NSMutableArray *arrSec = self.arrData[indexPath.section];
+    [arrSec removeObjectAtIndex:indexPath.row];
+    if (0 == arrSec.count) {
+        [self.arrData removeObjectAtIndex:indexPath.section];
+    }
+    
+    [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
 }
 
 
