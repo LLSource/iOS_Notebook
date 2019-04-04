@@ -7,11 +7,14 @@
 //
 
 #import "TestTableViewController.h"
+#import "TestTableViewCell.h"
 
 static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 
-@interface TestTableViewController ()
+@interface TestTableViewController ()<TestTableViewCellDelegate>
+
 @property (strong, nonatomic) NSMutableArray *arrData;
+
 @end
 
 
@@ -21,13 +24,48 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTestTVCellID];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTestTVCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TestTableViewCell" bundle:nil] forCellReuseIdentifier:kTestTVCellID];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma -mark TestTableViewCellDelegate
+
+- (void)testCellBtnDeleteClicked:(UIButton *)sender model:(TestModel *)model {
+    NSIndexPath *indexPath ;
+    
+    for (NSInteger i = 0; i<self.arrData.count; i++) {
+        
+        NSMutableArray *arrSec = self.arrData[i];
+        for (NSInteger j = 0; j<arrSec.count; j++) {
+            if (arrSec[j] == model) {
+                [arrSec removeObjectAtIndex:j];
+                indexPath = [NSIndexPath indexPathForRow:j inSection:i];
+                
+                if (0 == arrSec.count) {
+                    [self.arrData removeObjectAtIndex:i];
+                }
+                break;
+            }
+        }
+    }
+    if (indexPath)
+        [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 1;
+}
+
 
 #pragma -mark UITableviewDatasource
 
@@ -40,10 +78,10 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTestTVCellID];
-    NSUInteger count = [[self.arrData[indexPath.section] objectAtIndex:indexPath.row] integerValue];
-    NSString *str = [NSString stringWithFormat:@"%ld-%ld   %ld", indexPath.section, indexPath.row, count];
-    cell.textLabel.text = str;
+    TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTestTVCellID];
+    cell.deletate = self;
+    
+    cell.model = [self.arrData[indexPath.section] objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -59,11 +97,7 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 
 - (NSMutableArray *)arrData {
     if (!_arrData) {
-        _arrData = @[].mutableCopy;
-        for (NSUInteger i = 0; i<5; i++) {
-            NSMutableArray *arrSub = @[@1, @2, @3, @4, @5].mutableCopy;
-            [_arrData addObject:arrSub];
-        }
+        _arrData = [TestModel defaultTestModelArray];
         
     }
     return _arrData;

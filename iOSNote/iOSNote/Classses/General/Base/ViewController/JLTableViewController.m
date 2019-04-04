@@ -58,6 +58,7 @@
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.rowHeight = 49;
+        _tableView.backgroundColor= [UIColor groupTableViewBackgroundColor];
     }
     return _tableView;
 }

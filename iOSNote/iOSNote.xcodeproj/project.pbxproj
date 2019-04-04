@@ -15,6 +15,9 @@
 		0A2BFF1A20F371290028B356 /* JLListItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1920F371290028B356 /* JLListItemViewController.m */; };
 		0A2BFF1D20F372010028B356 /* JLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1C20F372010028B356 /* JLSearchViewController.m */; };
 		0A2BFF2020F372460028B356 /* UISearchBar+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BFF1E20F372460028B356 /* UISearchBar+Addition.m */; };
+		0A393D482255A51F00245583 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A393D462255A51F00245583 /* TestTableViewCell.m */; };
+		0A393D492255A51F00245583 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A393D472255A51F00245583 /* TestTableViewCell.xib */; };
+		0A393D4C2255AA2500245583 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A393D4B2255AA2500245583 /* TestModel.m */; };
 		0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */; };
 		0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013620F07DAF00EA4591 /* BBSTabBar.m */; };
 		0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013A20F07DAF00EA4591 /* UITabBar+badge.m */; };
@@ -100,6 +103,11 @@
 		0A2BFF1C20F372010028B356 /* JLSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSearchViewController.m; sourceTree = "<group>"; };
 		0A2BFF1E20F372460028B356 /* UISearchBar+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Addition.m"; sourceTree = "<group>"; };
 		0A2BFF1F20F372460028B356 /* UISearchBar+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Addition.h"; sourceTree = "<group>"; };
+		0A393D452255A51F00245583 /* TestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		0A393D462255A51F00245583 /* TestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		0A393D472255A51F00245583 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		0A393D4A2255AA2500245583 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		0A393D4B2255AA2500245583 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSNavigationBar.m; sourceTree = "<group>"; };
 		0A56013620F07DAF00EA4591 /* BBSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSTabBar.m; sourceTree = "<group>"; };
 		0A56013720F07DAF00EA4591 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
@@ -603,6 +611,11 @@
 			children = (
 				0A771FCF20F5A29D0050BB78 /* TestTableViewController.h */,
 				0A771FD020F5A29D0050BB78 /* TestTableViewController.m */,
+				0A393D452255A51F00245583 /* TestTableViewCell.h */,
+				0A393D462255A51F00245583 /* TestTableViewCell.m */,
+				0A393D472255A51F00245583 /* TestTableViewCell.xib */,
+				0A393D4A2255AA2500245583 /* TestModel.h */,
+				0A393D4B2255AA2500245583 /* TestModel.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -806,6 +819,7 @@
 				0A56FF7520F06CD400EA4591 /* LaunchScreen.storyboard in Resources */,
 				0AA7195F20F0F846007BA4A9 /* MemoryViewController.xib in Resources */,
 				0A23E85E20F49739006F09E9 /* JLSearchResultViewController.xib in Resources */,
+				0A393D492255A51F00245583 /* TestTableViewCell.xib in Resources */,
 				0A56FF7220F06CD400EA4591 /* Assets.xcassets in Resources */,
 				0AA7195620F0B503007BA4A9 /* CategoryViewController.xib in Resources */,
 				0A8AEF5620F1AC9C002221B4 /* BlockViewController.xib in Resources */,
@@ -998,6 +1012,7 @@
 				0A5602E220F07DB000EA4591 /* Constant.m in Sources */,
 				0A5602D420F07DB000EA4591 /* UITableView+Addition.m in Sources */,
 				0A5602C720F07DB000EA4591 /* BBSProgressHUD.m in Sources */,
+				0A393D482255A51F00245583 /* TestTableViewCell.m in Sources */,
 				0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */,
 				0A2BFF1720F370F90028B356 /* FunctionViewController.m in Sources */,
 				0A5602D220F07DB000EA4591 /* UIView+create.m in Sources */,
@@ -1005,6 +1020,7 @@
 				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
 				0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */,
 				0A23E85D20F49739006F09E9 /* JLSearchResultViewController.m in Sources */,
+				0A393D4C2255AA2500245583 /* TestModel.m in Sources */,
 				0A5602ED20F093A400EA4591 /* JLTableViewController.m in Sources */,
 				0A8AEF5520F1AC9C002221B4 /* BlockViewController.m in Sources */,
 				0AA7195920F0B5D1007BA4A9 /* HomeViewController.m in Sources */,

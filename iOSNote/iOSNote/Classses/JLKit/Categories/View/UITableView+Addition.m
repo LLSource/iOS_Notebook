@@ -43,8 +43,12 @@
     }
     
     if (rowCount == 1) { // delete section
-        NSIndexSet *set = [NSIndexSet indexSetWithIndex:section];
-        [self deleteSections:set withRowAnimation:animation];
+        if (sectionCount == 1) {
+            [self reloadData];
+        } else {
+            NSIndexSet *set = [NSIndexSet indexSetWithIndex:section];
+            [self deleteSections:set withRowAnimation:animation];
+        }
     } else if (rowCount > 1) {
         [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:section]] withRowAnimation:animation];
     }
