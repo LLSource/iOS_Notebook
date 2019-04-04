@@ -43,7 +43,12 @@
     }
     
     if (rowCount == 1) { // delete section
-        if (sectionCount == 1) {
+        // 没实现默认 1 section，实现看 section
+        BOOL atleastOneSection = ![self.dataSource respondsToSelector:@selector(numberOfSectionsInTableView:)] ||
+        [self.dataSource numberOfSectionsInTableView:self];
+        
+        if (1 == sectionCount && // 只有 1 section  1 row && 至少显示 1 section，不能直接删除
+            atleastOneSection) {
             [self reloadData];
         } else {
             NSIndexSet *set = [NSIndexSet indexSetWithIndex:section];

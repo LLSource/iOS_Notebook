@@ -18,6 +18,7 @@
 		0A393D482255A51F00245583 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A393D462255A51F00245583 /* TestTableViewCell.m */; };
 		0A393D492255A51F00245583 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A393D472255A51F00245583 /* TestTableViewCell.xib */; };
 		0A393D4C2255AA2500245583 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A393D4B2255AA2500245583 /* TestModel.m */; };
+		0A393D512255B26800245583 /* PlainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A393D502255B26800245583 /* PlainListViewController.m */; };
 		0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */; };
 		0A5602BC20F07DB000EA4591 /* BBSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013620F07DAF00EA4591 /* BBSTabBar.m */; };
 		0A5602BD20F07DB000EA4591 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56013A20F07DAF00EA4591 /* UITabBar+badge.m */; };
@@ -108,6 +109,8 @@
 		0A393D472255A51F00245583 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		0A393D4A2255AA2500245583 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		0A393D4B2255AA2500245583 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		0A393D4F2255B26800245583 /* PlainListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlainListViewController.h; sourceTree = "<group>"; };
+		0A393D502255B26800245583 /* PlainListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlainListViewController.m; sourceTree = "<group>"; };
 		0A56013520F07DAF00EA4591 /* BBSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSNavigationBar.m; sourceTree = "<group>"; };
 		0A56013620F07DAF00EA4591 /* BBSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSTabBar.m; sourceTree = "<group>"; };
 		0A56013720F07DAF00EA4591 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
@@ -264,6 +267,29 @@
 				0A23E85C20F49739006F09E9 /* JLSearchResultViewController.xib */,
 			);
 			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		0A393D4D2255B24200245583 /* GroupTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0A771FCF20F5A29D0050BB78 /* TestTableViewController.h */,
+				0A771FD020F5A29D0050BB78 /* TestTableViewController.m */,
+				0A393D452255A51F00245583 /* TestTableViewCell.h */,
+				0A393D462255A51F00245583 /* TestTableViewCell.m */,
+				0A393D472255A51F00245583 /* TestTableViewCell.xib */,
+				0A393D4A2255AA2500245583 /* TestModel.h */,
+				0A393D4B2255AA2500245583 /* TestModel.m */,
+			);
+			path = GroupTableView;
+			sourceTree = "<group>";
+		};
+		0A393D4E2255B24F00245583 /* PlainList */ = {
+			isa = PBXGroup;
+			children = (
+				0A393D4F2255B26800245583 /* PlainListViewController.h */,
+				0A393D502255B26800245583 /* PlainListViewController.m */,
+			);
+			path = PlainList;
 			sourceTree = "<group>";
 		};
 		0A56013420F07DAF00EA4591 /* Tab_NavigationBar */ = {
@@ -609,13 +635,8 @@
 		0A771FCE20F5A27B0050BB78 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0A771FCF20F5A29D0050BB78 /* TestTableViewController.h */,
-				0A771FD020F5A29D0050BB78 /* TestTableViewController.m */,
-				0A393D452255A51F00245583 /* TestTableViewCell.h */,
-				0A393D462255A51F00245583 /* TestTableViewCell.m */,
-				0A393D472255A51F00245583 /* TestTableViewCell.xib */,
-				0A393D4A2255AA2500245583 /* TestModel.h */,
-				0A393D4B2255AA2500245583 /* TestModel.m */,
+				0A393D4E2255B24F00245583 /* PlainList */,
+				0A393D4D2255B24200245583 /* GroupTableView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1000,6 +1021,7 @@
 				0A5602C820F07DB000EA4591 /* BBSGrowTextContentView.m in Sources */,
 				0AEFC68A219068640051670F /* RuntimeViewController.m in Sources */,
 				0A5602D320F07DB000EA4591 /* UIView+errorTip.m in Sources */,
+				0A393D512255B26800245583 /* PlainListViewController.m in Sources */,
 				0A5602DD20F07DB000EA4591 /* BaseViewController.m in Sources */,
 				0A5602D120F07DB000EA4591 /* UIView+Addition.m in Sources */,
 				0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */,
@@ -1141,7 +1163,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1193,7 +1215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

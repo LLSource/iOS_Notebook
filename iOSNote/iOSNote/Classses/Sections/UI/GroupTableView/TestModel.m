@@ -59,4 +59,42 @@
     return array;
 }
 
+
+
++ (NSMutableArray *)plainTestModelArray {
+    NSMutableArray *arrSection = @[].mutableCopy;
+    {
+        TestModel *model = [TestModel new];
+        model.name = @"七牛";
+        model.modelID = 1;
+        [arrSection addObject:model];
+    }
+    {
+        TestModel *model = [TestModel new];
+        model.name = @"六间房";
+        model.modelID = 2;
+        [arrSection addObject:model];
+    }
+    {
+        TestModel *model = [TestModel new];
+        model.name = @"阿里巴巴";
+        model.modelID = 3;
+        [arrSection addObject:model];
+    }
+    {
+        TestModel *model = [TestModel new];
+        model.name = @"百度";
+        model.modelID = 11;
+        [arrSection addObject:model];
+    }
+    {
+        TestModel *model = [TestModel new];
+        model.name = @"腾讯";
+        model.modelID = 12;
+        [arrSection addObject:model];
+    }
+    
+    return arrSection;
+}
+
 @end
