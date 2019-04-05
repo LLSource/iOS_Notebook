@@ -37,15 +37,19 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
     
     [self.arrData addObject:m];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.arrData.count - 1 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    if (1 == self.arrData.count) {
+        NSIndexSet *set = [NSIndexSet indexSetWithIndex:0];
+        [self.tableView insertSections:set withRowAnimation:UITableViewRowAnimationRight];
+    } else {
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    }
 }
-
 
 #pragma -mark UITableviewDatasource
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;//self.arrData.count ? 1 : 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.arrData.count ? 1 : 0;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.arrData count];

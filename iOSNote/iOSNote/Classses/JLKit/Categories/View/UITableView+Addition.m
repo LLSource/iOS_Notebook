@@ -75,6 +75,30 @@
     [self adt_deleteRowAtIndexPath:indexPath animation:animation];
 }
 
+
+- (void)adt_insertRowsAtIndexPath:(NSIndexPath *)indexPath withRowAnimation:(UITableViewRowAnimation)animation {
+    if (nil == indexPath) return;
+    NSInteger beforeSectionNumber = [self numberOfSections];
+    
+    if (indexPath.section < beforeSectionNumber) {
+        [self insertRowsAtIndexPaths:@[indexPath] withRowAnimation:animation];
+    } else if (indexPath.section == beforeSectionNumber) {
+        NSIndexSet *set = [NSIndexSet indexSetWithIndex:indexPath.section];
+        [self insertSections:set withRowAnimation:animation];
+    } else {
+#if DEBUG
+        NSAssert(nil, @"- (void)adt_insertRowsAtIndexPath:, section 越界 ");
+#else
+        return;
+#endif
+    }
+}
+
+- (void)adt_insertRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    [self adt_insertRowsAtIndexPath:indexPath withRowAnimation:animation];
+}
+
 @end
 
 
