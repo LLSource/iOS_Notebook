@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *name;
 @property (assign, nonatomic) NSInteger modelID;
 
++ (instancetype)randomModel ;
+
 + (NSMutableArray *)defaultTestModelArray ;
 
 + (NSMutableArray *)plainTestModelArray ; 

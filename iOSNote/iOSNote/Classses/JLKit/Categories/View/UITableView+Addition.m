@@ -29,34 +29,50 @@
 }
 
 - (void)adt_deleteRowAtIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation)animation {
-    [self adt_deleteRow:indexPath.row inSection:indexPath.section animation:animation];
+    NSUInteger sectionCount = [self numberOfSections]; // 删除之前的 section number
+    if (indexPath.section >= sectionCount) {
+#if DEBUG
+        NSAssert(nil, @" - (void)adt_deleteRowAtIndexPath, section 越界 ");
+#else
+        return;
+#endif
+    }
+    
+    NSUInteger rowCount = [self numberOfRowsInSection:indexPath.section];// 删除之前的 row number
+    if (indexPath.row >= rowCount) {
+#if DEBUG
+        NSAssert(nil, @" - (void)adt_deleteRowAtIndexPath, row 越界 ");
+#else
+        return;
+#endif
+    }
+    
+    dispatch_block_t deleteRowBlock = ^{
+        [self deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:animation];
+    };
+    
+    // 删到最后 1 个 row 要特别小心
+    if (rowCount == 1) { // judge weather or not can delete section
+        // 没实现默认 1 section
+        if ( ![self.dataSource respondsToSelector:@selector(numberOfSectionsInTableView:)] ) {
+            deleteRowBlock();
+        } else { // 实现了 - （NSInteger)numberOfSectionsInTableView ;
+            NSInteger remindSection = [self.dataSource numberOfSectionsInTableView:self];
+            if (remindSection == sectionCount) { // 删除该 section 最后 1 row，section 数量没减少
+                deleteRowBlock();
+            } else {
+                NSIndexSet *set = [NSIndexSet indexSetWithIndex:indexPath.section];
+                [self deleteSections:set withRowAnimation:animation];
+            }
+        }
+    } else if (rowCount > 1) {
+        deleteRowBlock();
+    }
 }
 
 - (void)adt_deleteRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation {
-    NSUInteger sectionCount = [self numberOfSections];
-    if (section >= sectionCount) {
-        return;
-    }
-    NSUInteger rowCount = [self numberOfRowsInSection:section];
-    if (row >= rowCount) {
-        return;
-    }
-    
-    if (rowCount == 1) { // delete section
-        // 没实现默认 1 section，实现看 section
-        BOOL atleastOneSection = ![self.dataSource respondsToSelector:@selector(numberOfSectionsInTableView:)] ||
-        [self.dataSource numberOfSectionsInTableView:self];
-        
-        if (1 == sectionCount && // 只有 1 section  1 row && 至少显示 1 section，不能直接删除
-            atleastOneSection) {
-            [self reloadData];
-        } else {
-            NSIndexSet *set = [NSIndexSet indexSetWithIndex:section];
-            [self deleteSections:set withRowAnimation:animation];
-        }
-    } else if (rowCount > 1) {
-        [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:section]] withRowAnimation:animation];
-    }
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    [self adt_deleteRowAtIndexPath:indexPath animation:animation];
 }
 
 @end

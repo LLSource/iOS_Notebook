@@ -62,6 +62,10 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [NSString stringWithFormat:@"%lu section", section];
+}
+
 /*
  是否实现：numberOfSectionsInTableView
  实现
@@ -75,10 +79,11 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
     
     NSMutableArray *arrSec = self.arrData[indexPath.section];
     [arrSec removeObjectAtIndex:indexPath.row];
+    
     if (0 == arrSec.count) {
         [self.arrData removeObjectAtIndex:indexPath.section];
     }
-    
+
     [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
 }
 

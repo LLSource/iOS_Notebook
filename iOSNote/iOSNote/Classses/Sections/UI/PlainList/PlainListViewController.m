@@ -24,26 +24,28 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self rightBarItemWithTitle:@"Insert"];
+    
     self.title = NSStringFromClass([self class]);
-     [self.tableView registerNib:[UINib nibWithNibName:@"TestTableViewCell" bundle:nil] forCellReuseIdentifier:kTestTVCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TestTableViewCell" bundle:nil] forCellReuseIdentifier:kTestTVCellID];
 }
 
+#pragma -mark enent & response
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 1;
+- (void)rightBarItemClicked {
+    TestModel *m = [TestModel randomModel];
+    
+    [self.arrData addObject:m];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.arrData.count - 1 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
 }
 
 
 #pragma -mark UITableviewDatasource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.arrData.count ? 1 : 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    return 1;//self.arrData.count ? 1 : 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.arrData count];
@@ -63,14 +65,27 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
         返回 0 正常
         返回 1 正常
     不实现    正常
+ ---------------
+ deleteRowsAtIndexPaths
+    不实现 - numberOfSectionsInTableView 方法，默认返回 1， deleteRow 不会崩溃
+    多个 section 删除 row 时，numberOfSections 控制器是否允许存在 0 行的 section
+        允许：如果最后一个 section row number = 0， 直接删除没问题，section仍然存在
+        不允许：deleteRow 崩溃，要直接 deleteSection
  
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.arrData removeObjectAtIndex:indexPath.row];
     [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
-    
-    // NSLog(@"%d", [tableView respondsToSelector:@selector(numberOfSectionsInTableView:)]);
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 1;
 }
 
 
