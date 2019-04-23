@@ -51,7 +51,7 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:arrSection.count - 1 inSection:self.arrData.count-1];
         // [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-        [self.tableView adt_insertRowsAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationLeft];
+        [self.tableView adt_insertRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationLeft];
     }
 }
 

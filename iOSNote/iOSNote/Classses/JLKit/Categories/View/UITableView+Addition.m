@@ -76,7 +76,7 @@
 }
 
 
-- (void)adt_insertRowsAtIndexPath:(NSIndexPath *)indexPath withRowAnimation:(UITableViewRowAnimation)animation {
+- (void)adt_insertRowAtIndexPath:(NSIndexPath *)indexPath withRowAnimation:(UITableViewRowAnimation)animation {
     if (nil == indexPath) return;
     NSInteger beforeSectionNumber = [self numberOfSections];
     
@@ -96,7 +96,7 @@
 
 - (void)adt_insertRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
-    [self adt_insertRowsAtIndexPath:indexPath withRowAnimation:animation];
+    [self adt_insertRowAtIndexPath:indexPath withRowAnimation:animation];
 }
 
 @end
