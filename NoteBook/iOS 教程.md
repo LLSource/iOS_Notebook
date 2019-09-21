@@ -13,15 +13,17 @@
 objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key,
  id _Nullable value, objc_AssociationPolicy policy)
  
- 全局哈希表继承自 unordered_map                object 所有关联对象哈希表 unordered_map
+ 全局 map 继承自 unordered_map                object 所有关联对象 std::map unordered_map
  --------                                      传入的参数 key 作为 KEY
  |obj adr|: ~uintptr_t(object)-----> value       |-------|
- | ----  |                                       | key   | : Class(policy, value)
+ | ----  |                                       | key:Class(policy, value)   | 
  |       |                                       |-------|
  | ----  |                                       |       |
  |       |                                       |-------|
  | ----  |                                       |-------|
 ```
+
+`unordered_map` 是用哈希表实现的， `std::map` 是平衡二叉树。
 
 1. 知识点1[ intptr_t 和uintptr_t ](https://blog.csdn.net/lsjseu/article/details/42360709)
 
