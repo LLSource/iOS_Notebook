@@ -52,6 +52,8 @@
 		0A56FF7820F06CD400EA4591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF7720F06CD400EA4591 /* main.m */; };
 		0A56FF8220F06CD400EA4591 /* iOSNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF8120F06CD400EA4591 /* iOSNoteTests.m */; };
 		0A56FF8D20F06CD400EA4591 /* iOSNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56FF8C20F06CD400EA4591 /* iOSNoteUITests.m */; };
+		0A5FF4662466F42800003178 /* JLFlowLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FF4652466F42800003178 /* JLFlowLayoutView.m */; };
+		0A5FF46A2466F58F00003178 /* TestFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FF4692466F58F00003178 /* TestFlowLayoutViewController.m */; };
 		0A771FD120F5A29D0050BB78 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A771FD020F5A29D0050BB78 /* TestTableViewController.m */; };
 		0A8AEF5520F1AC9C002221B4 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8AEF5320F1AC9C002221B4 /* BlockViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0A8AEF5620F1AC9C002221B4 /* BlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8AEF5420F1AC9C002221B4 /* BlockViewController.xib */; };
@@ -182,6 +184,10 @@
 		0A56FF8820F06CD400EA4591 /* iOSNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A56FF8C20F06CD400EA4591 /* iOSNoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNoteUITests.m; sourceTree = "<group>"; };
 		0A56FF8E20F06CD400EA4591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5FF4642466F42800003178 /* JLFlowLayoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLFlowLayoutView.h; sourceTree = "<group>"; };
+		0A5FF4652466F42800003178 /* JLFlowLayoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLFlowLayoutView.m; sourceTree = "<group>"; };
+		0A5FF4682466F58F00003178 /* TestFlowLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlowLayoutViewController.h; sourceTree = "<group>"; };
+		0A5FF4692466F58F00003178 /* TestFlowLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFlowLayoutViewController.m; sourceTree = "<group>"; };
 		0A771FCF20F5A29D0050BB78 /* TestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		0A771FD020F5A29D0050BB78 /* TestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		0A8AEF5220F1AC9C002221B4 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -438,6 +444,8 @@
 				0A56014D20F07DAF00EA4591 /* ErrorView */,
 				0A56013B20F07DAF00EA4591 /* CommonView */,
 				0A56013420F07DAF00EA4591 /* Tab_NavigationBar */,
+				0A5FF4642466F42800003178 /* JLFlowLayoutView.h */,
+				0A5FF4652466F42800003178 /* JLFlowLayoutView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -587,6 +595,7 @@
 		0A56FFA320F06E3400EA4591 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FF4672466F57300003178 /* FlowLayoutView */,
 				0AE5C48D21076D2900DF71C3 /* Test */,
 				0A771FCE20F5A27B0050BB78 /* UI */,
 				0A2BFF1320F370390028B356 /* Function */,
@@ -630,6 +639,15 @@
 				0A56019A20F07DAF00EA4591 /* Helpers */,
 			);
 			path = JLKit;
+			sourceTree = "<group>";
+		};
+		0A5FF4672466F57300003178 /* FlowLayoutView */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FF4682466F58F00003178 /* TestFlowLayoutViewController.h */,
+				0A5FF4692466F58F00003178 /* TestFlowLayoutViewController.m */,
+			);
+			path = FlowLayoutView;
 			sourceTree = "<group>";
 		};
 		0A771FCE20F5A27B0050BB78 /* UI */ = {
@@ -1023,6 +1041,7 @@
 				0A5602D320F07DB000EA4591 /* UIView+errorTip.m in Sources */,
 				0A393D512255B26800245583 /* PlainListViewController.m in Sources */,
 				0A5602DD20F07DB000EA4591 /* BaseViewController.m in Sources */,
+				0A5FF4662466F42800003178 /* JLFlowLayoutView.m in Sources */,
 				0A5602D120F07DB000EA4591 /* UIView+Addition.m in Sources */,
 				0A5602BB20F07DB000EA4591 /* BBSNavigationBar.m in Sources */,
 				0A5602D620F07DB000EA4591 /* UIView+bbsExtension.swift in Sources */,
@@ -1059,6 +1078,7 @@
 				0A5602BF20F07DB000EA4591 /* BBSTextView.m in Sources */,
 				0AA7195520F0B503007BA4A9 /* CategoryViewController.mm in Sources */,
 				0A23E86120F4A19B006F09E9 /* UIDevice+Addition.m in Sources */,
+				0A5FF46A2466F58F00003178 /* TestFlowLayoutViewController.m in Sources */,
 				0A5602C220F07DB000EA4591 /* BigHitButton.swift in Sources */,
 				0AE5C49121076D4600DF71C3 /* TestViewController.m in Sources */,
 				0A56FF7820F06CD400EA4591 /* main.m in Sources */,
