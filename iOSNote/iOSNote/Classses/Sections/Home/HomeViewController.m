@@ -10,6 +10,7 @@
 
 
 @interface HomeViewController ()
+@property (copy, nonatomic) NSString *name123_89;
 @end
 
 @implementation HomeViewController
@@ -19,6 +20,7 @@
     // Do any additional setup after loading the view.
     NSArray<NSString *> *className = @[@"RuntimeViewController", @"CategoryViewController", @"MemoryViewController", @"FunctionViewController", @"TestTableViewController", @"PlainListViewController"];
     [self.arrClassName addObjectsFromArray:className];
+    
 }
 
 @end
