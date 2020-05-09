@@ -22,6 +22,17 @@
 }
 
 
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    NSLog(@"%s", __func__);
+}
+
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+    NSLog(@"%s", __func__);
+}
+
 
 
 @end

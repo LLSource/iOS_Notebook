@@ -29,23 +29,10 @@
 }
 
 - (void)adt_deleteRowAtIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation)animation {
-    NSUInteger sectionCount = [self numberOfSections]; // 删除之前的 section number
-    if (indexPath.section >= sectionCount) {
-#if DEBUG
-        NSAssert(nil, @" - (void)adt_deleteRowAtIndexPath, section 越界 ");
-#else
-        return;
-#endif
-    }
+    if (![self adt_checkIndexPathValidate:indexPath]) return;
     
+    NSUInteger sectionCount = [self numberOfSections]; // 删除之前的 section number
     NSUInteger rowCount = [self numberOfRowsInSection:indexPath.section];// 删除之前的 row number
-    if (indexPath.row >= rowCount) {
-#if DEBUG
-        NSAssert(nil, @" - (void)adt_deleteRowAtIndexPath, row 越界 ");
-#else
-        return;
-#endif
-    }
     
     dispatch_block_t deleteRowBlock = ^{
         [self deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:animation];
@@ -99,21 +86,59 @@
     [self adt_insertRowAtIndexPath:indexPath withRowAnimation:animation];
 }
 
+/// 刷新列表并修复列表位置，更新后 toIndexPath 的位置和更新前 fromIndexPath 位置一致。
+/// @param operation 更新操作
+/// @param fromIndexPath 更新前 indexPath。
+/// @param toIndexPath 更新后 indexPath。
+- (void)adt_fixPositionReloadData:(void(^)(void))operation
+                             from:(NSIndexPath *)fromIndexPath
+                               to:(NSIndexPath *)toIndexPath {
+    if (!operation) return;
+    
+    // check indexPath
+    if (![self adt_checkIndexPathValidate:fromIndexPath]) return;
+    
+    CGPoint offset = self.contentOffset;
+    CGRect fromRect = [self rectForRowAtIndexPath:fromIndexPath];
+    
+    /// 刷新操作
+    operation();
+    // check indexPath
+    if (![self adt_checkIndexPathValidate:toIndexPath]) return;
+    
+    CGRect toRect = [self rectForRowAtIndexPath:toIndexPath];
+    CGFloat differY = fromRect.origin.y - toRect.origin.y;
+    offset.y -= differY;
+    
+    self.contentOffset = offset;
+}
+
+
+#pragma mark - private
+
+/// 检测 indexPath 是否合法
+/// @param indexPath -
+- (BOOL)adt_checkIndexPathValidate:(NSIndexPath *)indexPath {
+    // 判断 indexPath 是否合法
+    NSUInteger sectionCount = [self numberOfSections]; // 删除之前的 section number
+    if (indexPath.section >= sectionCount) {
+#if DEBUG
+        NSAssert(nil, @"adt_checkIndexPathValidate:, section 越界 ");
+#else
+        return NO;
+#endif
+    }
+    
+    NSUInteger rowCount = [self numberOfRowsInSection:indexPath.section];// 删除之前的 row number
+    if (indexPath.row >= rowCount) {
+#if DEBUG
+        NSAssert(nil, @"adt_checkIndexPathValidate:, row 越界 ");
+#else
+        return NO;
+#endif
+    }
+    return YES;
+}
+
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -99,14 +99,14 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
     NSMutableArray *arrSec = self.arrData[indexPath.section];
     [arrSec removeObjectAtIndex:indexPath.row];
-    
-    if (0 == arrSec.count) {
+//
+//    if (0 == arrSec.count) {
 //        [self.arrData removeObjectAtIndex:indexPath.section];
-    }
-
+//    }
+//
     [self.tableView adt_deleteRowAtIndexPath:indexPath animation:UITableViewRowAnimationLeft];
 }
 
@@ -114,7 +114,6 @@ static NSString *const kTestTVCellID = @"TestTableViewController.cell.id";
 - (NSMutableArray *)arrData {
     if (!_arrData) {
         _arrData = [TestModel defaultTestModelArray];
-        
     }
     return _arrData;
 }

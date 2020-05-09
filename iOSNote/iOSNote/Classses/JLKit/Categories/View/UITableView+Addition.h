@@ -25,4 +25,12 @@
 
 - (void)adt_insertRow:(NSUInteger)row inSection:(NSUInteger)section animation:(UITableViewRowAnimation)animation ;
 
+/// 刷新列表并修复列表位置，更新后 toIndexPath 的位置和更新前 fromIndexPath 位置一致。
+/// @param operation 更新操作
+/// @param fromIndexPath 更新前 indexPath。
+/// @param toIndexPath 更新后 indexPath。
+- (void)adt_fixPositionReloadData:(void(^)(void))operation
+                             from:(NSIndexPath *)fromIndexPath
+                               to:(NSIndexPath *)toIndexPath ;
+
 @end
