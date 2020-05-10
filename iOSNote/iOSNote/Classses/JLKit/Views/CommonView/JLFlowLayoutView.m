@@ -53,7 +53,7 @@ CGFloatSafeValue(CGFloat value) {
 - (void)setFrame:(CGRect)frame {
     UIView *selfObject = self;
     
-    // QMUIViewSelfSizingHeight 的功能
+    // JLViewSelfSizingHeight 的功能
     if (CGRectGetWidth(frame) > 0 && isinf(CGRectGetHeight(frame))) {
         CGFloat height = ceil([selfObject sizeThatFits:CGSizeMake(CGRectGetWidth(frame), CGFLOAT_MAX)].height);
         if (height > 0) frame.size.height = height;
@@ -61,28 +61,13 @@ CGFloatSafeValue(CGFloat value) {
     
     // 对非法的 frame，Debug 下中 assert，Release 下会将其中的 NaN 改为 0，避免 crash
     if ( isnan(frame.origin.x) || isnan(frame.origin.y) || isnan(frame.size.width) || isnan(frame.size.height) ) {
-//        QMUILogWarn(@"UIView (QMUI)", @"%@ setFrame:%@，参数包含 NaN，已被拦截并处理为 0。%@", selfObject, NSStringFromCGRect(frame), [NSThread callStackSymbols]);
-//        if (QMUICMIActivated && !ShouldPrintQMUIWarnLogToConsole) {
-//            NSAssert(NO, @"UIView setFrame: 出现 NaN");
-//        }
 #ifdef DEBUG
+        NSAssert(nil, @"有非法的 frame");
 #else
         frame = CGRectMake(CGFloatSafeValue(frame.origin.x), CGFloatSafeValue(frame.origin.y), CGFloatSafeValue(frame.size.width), CGFloatSafeValue(frame.size.height));
 #endif
     }
-    
-//    CGRect precedingFrame = selfObject.frame;
-//    BOOL valueChange = !CGRectEqualToRect(frame, precedingFrame);
-//    if (selfObject.qmui_frameWillChangeBlock && valueChange) {
-//        frame = selfObject.qmui_frameWillChangeBlock(selfObject, frame);
-//    }
-    
-    // call super
-//     void (*originSelectorIMP)(id, SEL, CGRect);
     [super setFrame:frame];
-//    originSelectorIMP = (void (*)(id, SEL, CGRect))originalIMPProvider();
-//    originSelectorIMP(selfObject, originCMD, frame);
-    
 }
 
 - (CGSize)layoutSubviewsWithSize:(CGSize)size shouldLayout:(BOOL)shouldLayout {

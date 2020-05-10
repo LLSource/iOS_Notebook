@@ -9,6 +9,7 @@
 #import "BBSErrorView.h"
 
 @interface BBSErrorView ()
+
 @property (strong, nonatomic) UILabel *lblTitle;
 @property (strong, nonatomic) UILabel *lblMsgSmall;
 @property (strong, nonatomic) UILabel *lblMesssage;
@@ -20,11 +21,12 @@
 
 
 @implementation BBSErrorView
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        [self setup];
+        [self setup];
     }
     return self;
 }
@@ -210,23 +212,3 @@
     return _btnReload;
 }
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

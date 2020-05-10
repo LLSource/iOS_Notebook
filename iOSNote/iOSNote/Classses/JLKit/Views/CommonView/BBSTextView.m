@@ -10,6 +10,7 @@
 
 
 @implementation BBSTextView
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -18,15 +19,17 @@
     }
     return self;
 }
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setup];
 }
+
 - (void)setup {
-    
     if (nil == _placeholderColor) {
         self.placeholderColor = [UIColor lightGrayColor];
     }
@@ -36,6 +39,7 @@
     
     self.backgroundColor = [UIColor clearColor];
 }
+
 - (void)drawRect:(CGRect)rect {
     NSString *text = self.text;
     // 绘制 placeholder
@@ -56,10 +60,12 @@
     _placeHolder = placeholder.copy;
     [self setNeedsDisplay];
 }
+
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     _placeholderColor = placeholderColor;
     [self setNeedsDisplay];
 }
+
 - (void)setText:(NSString *)text {
     [super setText:text];
     [self setNeedsDisplay];

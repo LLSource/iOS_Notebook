@@ -317,6 +317,8 @@
 				0A56014120F07DAF00EA4591 /* BigHitButton.swift */,
 				0A56013D20F07DAF00EA4591 /* BBSTextView.m */,
 				0A56014620F07DAF00EA4591 /* BBSTextView.h */,
+				0A5FF4642466F42800003178 /* JLFlowLayoutView.h */,
+				0A5FF4652466F42800003178 /* JLFlowLayoutView.m */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -444,8 +446,6 @@
 				0A56014D20F07DAF00EA4591 /* ErrorView */,
 				0A56013B20F07DAF00EA4591 /* CommonView */,
 				0A56013420F07DAF00EA4591 /* Tab_NavigationBar */,
-				0A5FF4642466F42800003178 /* JLFlowLayoutView.h */,
-				0A5FF4652466F42800003178 /* JLFlowLayoutView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -13,4 +13,5 @@ IB_DESIGNABLE
 
 @property (copy, nonatomic) IBInspectable NSString *placeHolder;
 @property (copy, nonatomic) IBInspectable UIColor *placeholderColor;
+
 @end
