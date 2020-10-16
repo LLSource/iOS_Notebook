@@ -23,7 +23,7 @@
 /// @param width 最大宽度
 - (CGFloat)adt_linesCountWithFont:(UIFont *)font width:(CGFloat)width {
     CGFloat height = [self textHeightWithFont:font width:width];
-    return height / font.lineHeight;
+    return (height + 0.01) / font.lineHeight;
 }
 
 - (CGFloat)textHeightWithFont:(UIFont *)font width:(CGFloat)width {
