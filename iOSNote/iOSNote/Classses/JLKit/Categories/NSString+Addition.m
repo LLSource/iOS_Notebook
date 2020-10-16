@@ -13,10 +13,17 @@
 
 @implementation NSString (Addition)
 
-
 - (CGFloat)textWidthWithFont:(UIFont *)font height:(CGFloat)height {
     NSString *text = self;
     return [text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size.width;
+}
+
+/// 计算行数
+/// @param font 字体
+/// @param width 最大宽度
+- (CGFloat)adt_linesCountWithFont:(UIFont *)font width:(CGFloat)width {
+    CGFloat height = [self textHeightWithFont:font width:width];
+    return height / font.lineHeight;
 }
 
 - (CGFloat)textHeightWithFont:(UIFont *)font width:(CGFloat)width {

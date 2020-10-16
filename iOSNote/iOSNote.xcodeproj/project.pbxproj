@@ -70,6 +70,7 @@
 		0AEFC692219068B70051670F /* RTEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFC691219068B70051670F /* RTEmployee.m */; };
 		0AEFC695219069B40051670F /* RTEmployee+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFC694219069B40051670F /* RTEmployee+Addition.m */; };
 		264C14AF81C9072437A8DB10 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D086892C545B34599B3E78 /* libPods-iOSNote.a */; };
+		AB68F7E02539AF9400E2BEA6 /* NSAttributedString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = AB68F7DF2539AF9400E2BEA6 /* NSAttributedString+Addition.m */; };
 		BF8B2AC293F654B94C9765FD /* libPods-iOSNoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE882992A24278B6ED4E1F42 /* libPods-iOSNoteTests.a */; };
 		EE40458CD33EAD4DC9616F49 /* libPods-iOSNoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0FA2894DF389B73DA57A32 /* libPods-iOSNoteUITests.a */; };
 /* End PBXBuildFile section */
@@ -218,6 +219,8 @@
 		8A4E3989BAD23C88364E8434 /* Pods-iOSNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.release.xcconfig"; sourceTree = "<group>"; };
 		9C0FA2894DF389B73DA57A32 /* libPods-iOSNoteUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSNoteUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3F0D6A0FA915D69BA8D4B /* Pods-iOSNoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNoteUITests/Pods-iOSNoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB68F7DE2539AF9400E2BEA6 /* NSAttributedString+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Addition.h"; sourceTree = "<group>"; };
+		AB68F7DF2539AF9400E2BEA6 /* NSAttributedString+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Addition.m"; sourceTree = "<group>"; };
 		AE882992A24278B6ED4E1F42 /* libPods-iOSNoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSNoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E662B51ED9F32F77578F48A1 /* Pods-iOSNoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNoteUITests/Pods-iOSNoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC5B8827F0D4A37A81FF8C3F /* Pods-iOSNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 				0A23E85F20F4A19B006F09E9 /* UIDevice+Addition.m */,
 				0A56016320F07DAF00EA4591 /* NSString+Addition.h */,
 				0A56017A20F07DAF00EA4591 /* NSString+Addition.m */,
+				AB68F7DE2539AF9400E2BEA6 /* NSAttributedString+Addition.h */,
+				AB68F7DF2539AF9400E2BEA6 /* NSAttributedString+Addition.m */,
 				0A56016420F07DAF00EA4591 /* NSData+bbsContentType.h */,
 				0A56017920F07DAF00EA4591 /* NSData+bbsContentType.m */,
 				0A56016520F07DAF00EA4591 /* UIColor+Addition.swift */,
@@ -751,8 +756,6 @@
 				0A56FF6120F06CD000EA4591 /* Sources */,
 				0A56FF6220F06CD000EA4591 /* Frameworks */,
 				0A56FF6320F06CD000EA4591 /* Resources */,
-				FA22AEE102B2C01F9AD05E2E /* [CP] Embed Pods Frameworks */,
-				33F8196A4FF2A58C7B15166F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -771,8 +774,6 @@
 				0A56FF7920F06CD400EA4591 /* Sources */,
 				0A56FF7A20F06CD400EA4591 /* Frameworks */,
 				0A56FF7B20F06CD400EA4591 /* Resources */,
-				1566D36802788CF0A7C9C495 /* [CP] Embed Pods Frameworks */,
-				28FD09FC1B2CB06F448B360E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -792,8 +793,6 @@
 				0A56FF8420F06CD400EA4591 /* Sources */,
 				0A56FF8520F06CD400EA4591 /* Frameworks */,
 				0A56FF8620F06CD400EA4591 /* Resources */,
-				06FD63CAFCDD4B738FDAAD31 /* [CP] Embed Pods Frameworks */,
-				74B78FEEE000C4B1E8CEAEFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -885,21 +884,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06FD63CAFCDD4B738FDAAD31 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNoteUITests/Pods-iOSNoteUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		084CA120F8E451D850FBC59F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -916,51 +900,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1566D36802788CF0A7C9C495 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNoteTests/Pods-iOSNoteTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28FD09FC1B2CB06F448B360E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNoteTests/Pods-iOSNoteTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		33F8196A4FF2A58C7B15166F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6E851AF2B5FACE0F3605ECB1 /* [CP] Check Pods Manifest.lock */ = {
@@ -981,21 +920,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		74B78FEEE000C4B1E8CEAEFD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNoteUITests/Pods-iOSNoteUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AC2867DBFB2190A8C975537D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1012,21 +936,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA22AEE102B2C01F9AD05E2E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1057,6 +966,7 @@
 				0A5602C920F07DB000EA4591 /* BBSGrowTextView.m in Sources */,
 				0A2BFF1720F370F90028B356 /* FunctionViewController.m in Sources */,
 				0A5602D220F07DB000EA4591 /* UIView+create.m in Sources */,
+				AB68F7E02539AF9400E2BEA6 /* NSAttributedString+Addition.m in Sources */,
 				0A5602DF20F07DB000EA4591 /* JLViewController.m in Sources */,
 				0AA7195E20F0F846007BA4A9 /* MemoryViewController.m in Sources */,
 				0A5602D020F07DB000EA4591 /* UIImage+Additon.m in Sources */,

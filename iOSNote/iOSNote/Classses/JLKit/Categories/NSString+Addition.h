@@ -22,6 +22,12 @@ struct BBSImageInfo {
  * 计算文字宽度
  */
 - (CGFloat)textWidthWithFont:(UIFont *)font height:(CGFloat)height ;
+
+/// 计算行数
+/// @param font 字体
+/// @param width 最大宽度
+- (CGFloat)adt_linesCountWithFont:(UIFont *)font width:(CGFloat)width;
+
 /**
  * 计算文字高度
  */
